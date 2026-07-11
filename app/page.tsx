@@ -60,7 +60,7 @@ export default function Page() {
         flexDirection: "column",
         alignItems: "center",
         width: "100%",
-        height: 160,
+        height: 180,
         margin: "0 auto",
         maxWidth: 600,
       }}
