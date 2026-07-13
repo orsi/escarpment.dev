@@ -1,7 +1,6 @@
 "use client";
 
 import Logo from "./components/Logo";
-import "./page.css";
 
 export default function Page() {
   return (

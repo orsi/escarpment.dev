@@ -9,10 +9,10 @@ export const metadata = {
 
 export default function MLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="flex min-h-screen flex-col bg-surface text-text">
+    <div className="flex min-h-screen flex-col">
       <Navigation />
       <main className="flex-1">{children}</main>
-      <footer className="mt-auto bg-accent px-6 py-9 text-footer-text sm:px-8 lg:px-10">
+      <footer className="mt-auto bg-primary-dark text-white px-6 py-9 text-footer-text sm:px-8 lg:px-10">
         <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <h3 className="mb-3 text-lg font-semibold">Northstar Renovations</h3>

@@ -1,4 +1,4 @@
-import "./layout.css";
+import "./global.css";
 import FaviconIcon from "./favicon.png";
 
 export default function RootLayout({

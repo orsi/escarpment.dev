@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Logo from "./Logo";
 
 const links = [
-  { href: "/m", label: "Home" },
   { href: "/m/services", label: "Services" },
   { href: "/m/about", label: "About" },
   { href: "/m/projects", label: "Projects" },
@@ -16,41 +16,45 @@ const links = [
 export default function Navigation() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
 
-  const renderedLinks = links.map((link) => {
-    const isActive = pathname === link.href || (link.href === "/m" && pathname === "/m/");
+  useEffect(() => {
+    const handleScroll = () => {
+      setHasScrolled(window.scrollY >= 100);
+    };
 
-    return (
-      <Link
-        key={link.href}
-        href={link.href}
-        className={isActive
-          ? "rounded-full bg-accent px-3 py-2 font-semibold text-card"
-          : "rounded-full px-3 py-2 font-semibold text-muted transition-colors hover:bg-accent hover:text-card"
-        }
-        onClick={() => setOpen(false)}
-      >
-        {link.label}
-      </Link>
-    );
-  });
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-card/95 px-4 py-4 backdrop-blur sm:px-6 lg:px-8">
-      <div className="mx-auto flex max-w-7xl items-center justify-between">
-        <Link href="/m" className="text-lg font-bold uppercase tracking-widest text-text" onClick={() => setOpen(false)}>
-          Northstar Renovations
+    <header className={`sticky top-0 z-50 h-(--height-nav) w-full max-w-7xl mx-auto text-slate-50 transition-[height,background-color] duration-500 ${hasScrolled ? "bg-primary-dark/95 h-(--height-nav-collapsed)" : ""}`}>
+      <div className="relative flex h-full items-center justify-between px-6 sm:px-8">
+        <Link href="/m" onClick={() => setOpen(false)}>
+
+          <Logo className={`text-secondary-main sm:ml-10 transition-[width] duration-500 ${hasScrolled ? "w-10" : "w-20 sm:w-40"}`} />
         </Link>
         <button
-          className="inline-flex items-center justify-center rounded-full border border-border bg-surface-alt p-2 text-lg md:hidden"
+          className="md:hidden cursor-pointer"
           onClick={() => setOpen((value) => !value)}
           aria-expanded={open}
           aria-label="Toggle navigation"
         >
           {open ? "✕" : "☰"}
         </button>
-        <nav className={`absolute left-0 right-0 top-full flex-col gap-2 border-b border-border bg-card px-4 py-4 shadow-sm md:static md:flex md:flex-row md:items-center md:border-none md:bg-transparent md:p-0 md:shadow-none ${open ? "flex" : "hidden"}`}>
-          {renderedLinks}
+        <nav className={`absolute left-0 right-0 top-full flex-col gap-2  px-4 sm:px-6 py-4 shadow-lg md:static md:flex md:flex-row md:gap-2 md:bg-transparent md:p-0 md:shadow-none ${open ? "flex" : "hidden"} ${hasScrolled ? "bg-primary-dark/95" : "bg-black/80"}`}>
+          {links.map((link) => {
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="rounded-full px-3 py-2 text-sm font-medium text-white transition-colors hover:bg-white/10 md:text-inherit"
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
       </div>
     </header>
