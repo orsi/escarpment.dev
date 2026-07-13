@@ -36,7 +36,7 @@ export default function HomePage() {
         >
           <source src="/hero.mp4" type="video/mp4" />
         </video>
-        {/* <div className="absolute inset-0 bg-black/55" /> */}
+        <div className="absolute inset-0 bg-black/55" />
         <div className="relative mx-auto flex min-h-[78vh] max-w-7xl px-6 py-18 sm:py-24 sm:px-20">
           <div className="max-w-2xl text-white">
             <p className="mb-3 text-sm uppercase tracking-[0.35em] text-white/80">
