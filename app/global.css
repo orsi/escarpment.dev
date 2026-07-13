@@ -16,6 +16,13 @@
 
   --height-nav: 6rem;
   --height-nav-collapsed: 3rem;
+
+  --animate-draw-in: draw-in 1500ms 250ms cubic-bezier(0.5, 0, 0.22, 1) forwards;
+  @keyframes draw-in {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
 }
 
 html {

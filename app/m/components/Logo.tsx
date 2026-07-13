@@ -14,6 +14,7 @@ export default function Logo(props?: SVGProps<SVGSVGElement>) {
         </mask>
       </defs>
       <path
+        className="stroke-10 [stroke-dasharray:2000] [stroke-dashoffset:2000] animate-draw-in"
         mask="url(#cap)"
         stroke="currentColor"
         strokeWidth="20"
