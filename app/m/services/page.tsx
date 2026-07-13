@@ -33,32 +33,32 @@ export default function ServicesPage() {
   ];
 
   return (
-    <section className="page-section">
-      <div className="container">
-        <div className="section-heading">
+    <section className="px-6 py-16 sm:px-8 lg:px-10">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p className="muted">Services</p>
-            <h2>Renovation and contracting services for every stage of the project.</h2>
+            <p className="mb-2 text-sm uppercase tracking-[0.2em] text-[#64748b]">Services</p>
+            <h2 className="max-w-3xl text-3xl font-semibold text-[#1f2933]">Renovation and contracting services for every stage of the project.</h2>
           </div>
-          <p>Whether you need a quick upgrade or a full-scale remodel, our crew is equipped to handle it with reliable scheduling and careful workmanship.</p>
+          <p className="max-w-xl text-[#64748b]">Whether you need a quick upgrade or a full-scale remodel, our crew is equipped to handle it with reliable scheduling and careful workmanship.</p>
         </div>
 
-        <div className="media-grid">
-          <div className="media-card">
-            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80" alt="Renovation work in progress" />
+        <div className="mt-6 grid gap-4 md:grid-cols-2">
+          <div className="overflow-hidden rounded-[1.2rem] border border-[#e6dccf] shadow-[0_12px_30px_rgba(15,23,42,0.05)]">
+            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80" alt="Renovation work in progress" className="h-72 w-full object-cover" />
           </div>
-          <div className="media-card">
-            <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1400&q=80" alt="Finished bathroom renovation" />
+          <div className="overflow-hidden rounded-[1.2rem] border border-[#e6dccf] shadow-[0_12px_30px_rgba(15,23,42,0.05)]">
+            <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1400&q=80" alt="Finished bathroom renovation" className="h-72 w-full object-cover" />
           </div>
         </div>
 
-        <div className="card-grid" style={{ marginTop: "1.5rem" }}>
+        <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {services.map((service) => (
-            <article key={service.title} className="card image-card">
-              <img src={service.image} alt={service.title} />
-              <div className="card-content">
-                <h3>{service.title}</h3>
-                <p>{service.description}</p>
+            <article key={service.title} className="overflow-hidden rounded-[1.2rem] border border-[#e6dccf] bg-white shadow-[0_12px_30px_rgba(15,23,42,0.05)]">
+              <img src={service.image} alt={service.title} className="h-56 w-full object-cover" />
+              <div className="p-5">
+                <h3 className="mb-2 text-xl font-semibold">{service.title}</h3>
+                <p className="leading-7 text-[#64748b]">{service.description}</p>
               </div>
             </article>
           ))}

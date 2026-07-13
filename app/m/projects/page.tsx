@@ -18,32 +18,33 @@ export default function ProjectsPage() {
   ];
 
   return (
-    <section className="page-section">
-      <div className="container">
-        <div className="section-heading">
+    <section className="px-6 py-16 sm:px-8 lg:px-10">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p className="muted">Projects</p>
-            <h2>Recent work that blends practical upgrades with elevated design.</h2>
+            <p className="mb-2 text-sm uppercase tracking-[0.2em] text-[#64748b]">Projects</p>
+            <h2 className="max-w-3xl text-3xl font-semibold text-[#1f2933]">Recent work that blends practical upgrades with elevated design.</h2>
           </div>
-          <p>From cosmetic refreshes to large-scale renovations, these projects show the range of work we bring to homes and properties.</p>
+          <p className="max-w-xl text-[#64748b]">From cosmetic refreshes to large-scale renovations, these projects show the range of work we bring to homes and properties.</p>
         </div>
 
-        <div className="video-card" style={{ marginBottom: "1.5rem" }}>
+        <div className="mb-6 rounded-[1.25rem] border border-[#e6dccf] bg-white p-3 shadow-[0_12px_30px_rgba(15,23,42,0.05)]">
           <iframe
             src="https://www.youtube.com/embed/ScMzIvxBSi4?rel=0"
             title="Before and after renovation walkthrough"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
+            className="min-h-[320px] w-full rounded-[1rem] border-0"
           />
         </div>
 
-        <div className="card-grid">
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {projects.map((project) => (
-            <article key={project.title} className="card image-card">
-              <img src={project.image} alt={project.title} />
-              <div className="card-content">
-                <h3>{project.title}</h3>
-                <p>{project.blurb}</p>
+            <article key={project.title} className="overflow-hidden rounded-[1.2rem] border border-[#e6dccf] bg-white shadow-[0_12px_30px_rgba(15,23,42,0.05)]">
+              <img src={project.image} alt={project.title} className="h-56 w-full object-cover" />
+              <div className="p-5">
+                <h3 className="mb-2 text-xl font-semibold">{project.title}</h3>
+                <p className="leading-7 text-[#64748b]">{project.blurb}</p>
               </div>
             </article>
           ))}

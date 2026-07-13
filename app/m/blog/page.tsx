@@ -18,23 +18,23 @@ export default function BlogPage() {
   ];
 
   return (
-    <section className="page-section">
-      <div className="container">
-        <div className="section-heading">
+    <section className="px-6 py-16 sm:px-8 lg:px-10">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p className="muted">Insights</p>
-            <h2>Helpful ideas and updates from the renovation team.</h2>
+            <p className="mb-2 text-sm uppercase tracking-[0.2em] text-[#64748b]">Insights</p>
+            <h2 className="text-3xl font-semibold text-[#1f2933]">Helpful ideas and updates from the renovation team.</h2>
           </div>
-          <p>These starter posts are placeholder entries for future articles, project stories, and practical home tips.</p>
+          <p className="max-w-xl text-[#64748b]">These starter posts are placeholder entries for future articles, project stories, and practical home tips.</p>
         </div>
 
-        <div className="blog-list">
+        <div className="grid gap-4">
           {posts.map((post) => (
-            <article key={post.title} className="blog-card">
-              <img src={post.image} alt={post.title} />
-              <div className="card-content">
-                <h3>{post.title}</h3>
-                <p className="muted">{post.excerpt}</p>
+            <article key={post.title} className="rounded-[1rem] border border-[#e6dccf] bg-white p-5 shadow-[0_12px_30px_rgba(15,23,42,0.05)]">
+              <img src={post.image} alt={post.title} className="mb-4 h-52 w-full rounded-[0.9rem] object-cover" />
+              <div>
+                <h3 className="mb-2 text-xl font-semibold">{post.title}</h3>
+                <p className="text-[#64748b]">{post.excerpt}</p>
               </div>
             </article>
           ))}
