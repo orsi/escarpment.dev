@@ -3,19 +3,19 @@ import type { ReactNode } from "react";
 import Navigation from "./components/Navigation";
 
 export const metadata = {
-  title: "Northstar Renovations & Construction",
+  title: "Escarpment Developments",
   description: "Full-service renovation and construction company for homes, remodels, and property projects.",
 };
 
 export default function MLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col bg-primary-dark">
       <Navigation />
-      <main className="flex-1">{children}</main>
-      <footer className="mt-auto bg-primary-dark text-white px-6 py-9 text-footer-text sm:px-8 lg:px-10">
+      <main className="flex-1 bg-white">{children}</main>
+      <footer className="mt-auto text-white px-6 py-9 text-footer-text sm:px-8 lg:px-10">
         <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <h3 className="mb-3 text-lg font-semibold">Northstar Renovations</h3>
+            <h3 className="mb-3 text-lg font-semibold">Escarpment Developments</h3>
             <p className="text-sm leading-7 text-footer-text/80">
               Trusted craftsmanship for homes, properties, and complete remodeling projects.
             </p>
@@ -35,7 +35,7 @@ export default function MLayout({ children }: { children: ReactNode }) {
             <ul className="space-y-2 text-sm text-footer-text/80">
               <li>221 Market Street</li>
               <li>Denver, CO 80202</li>
-              <li>hello@northstarreno.com</li>
+              <li>hello@escarpmentdevelopments.com</li>
               <li>(303) 555-0148</li>
             </ul>
           </div>
@@ -49,7 +49,7 @@ export default function MLayout({ children }: { children: ReactNode }) {
           </div>
         </div>
         <div className="mx-auto mt-6 flex max-w-7xl flex-wrap items-center justify-between gap-3 border-t border-footer-text/15 pt-4 text-sm text-footer-text/70">
-          <span>© 2026 Northstar Renovations & Construction</span>
+          <span>© 2026 Escarpment Developments</span>
           <div className="flex flex-wrap gap-4">
             <Link href="/m/privacy" className="hover:text-accent-dark">Privacy Policy</Link>
             <Link href="/m/terms" className="hover:text-accent-dark">Terms of Use</Link>

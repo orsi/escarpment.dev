@@ -4,7 +4,7 @@ export default function PrivacyPage() {
       <div className="mx-auto max-w-3xl space-y-6 text-[#1f2933]">
         <h2 className="text-3xl font-semibold">Privacy Policy</h2>
         <p className="text-[#64748b] leading-8">
-          Northstar Renovations & Construction respects your privacy. This Privacy Policy explains how we collect, use, disclose, and protect personal information in connection with our website and business activities in Ontario, Canada.
+          Escarpment Developments respects your privacy. This Privacy Policy explains how we collect, use, disclose, and protect personal information in connection with our website and business activities in Ontario, Canada.
         </p>
         <h3 className="text-xl font-semibold">Information We Collect</h3>
         <p className="leading-8 text-[#64748b]">
@@ -28,7 +28,7 @@ export default function PrivacyPage() {
         </p>
         <h3 className="text-xl font-semibold">Contact Us</h3>
         <p className="leading-8 text-[#64748b]">
-          If you have any questions about this Privacy Policy, please contact us at hello@northstarreno.com or at 221 Market Street, Denver, CO 80202. Please note that our services are currently offered in Ontario, Canada.
+          If you have any questions about this Privacy Policy, please contact us at hello@escarpmentdevelopments.com or at 221 Market Street, Denver, CO 80202. Please note that our services are currently offered in Ontario, Canada.
         </p>
       </div>
     </section>

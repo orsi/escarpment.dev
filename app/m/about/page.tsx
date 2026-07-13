@@ -3,10 +3,10 @@ export default function AboutPage() {
     <section className="px-6 py-16 sm:px-8 lg:px-10">
       <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
         <div>
-          <p className="mb-2 text-sm uppercase tracking-[0.2em] text-[#64748b]">About Northstar</p>
+          <p className="mb-2 text-sm uppercase tracking-[0.2em] text-[#64748b]">About Escarpment</p>
           <h2 className="mb-4 text-3xl font-semibold text-[#1f2933]">Built on craftsmanship, care, and a commitment to doing things right.</h2>
           <p className="mb-4 text-[#64748b] leading-7">
-            Northstar Renovations & Construction was founded by a small team of tradespeople who believed that great homes deserve thoughtful planning and dependable execution. Over the past 20 years, the company has grown from a local remodeling crew into a trusted partner for homeowners, investors, and property owners across the region.
+            Escarpment Developments was founded by a small team of tradespeople who believed that great homes deserve thoughtful planning and dependable execution. Over the past 20 years, the company has grown from a local remodeling crew into a trusted partner for homeowners, investors, and property owners across the region.
           </p>
           <p className="text-[#64748b] leading-7">
             We combine hands-on construction experience with a simple mission: make each project feel seamless, clear, and rewarding from the first conversation to the final walkthrough.

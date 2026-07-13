@@ -4,7 +4,7 @@ export default function AccessibilityPage() {
       <div className="mx-auto max-w-3xl space-y-6 text-[#1f2933]">
         <h2 className="text-3xl font-semibold">Accessibility Statement</h2>
         <p className="text-[#64748b] leading-8">
-          Northstar Renovations & Construction is committed to making our website accessible to everyone, including people with disabilities.
+          Escarpment Developments is committed to making our website accessible to everyone, including people with disabilities.
         </p>
         <h3 className="text-xl font-semibold">Our Commitment</h3>
         <p className="leading-8 text-[#64748b]">
@@ -16,7 +16,7 @@ export default function AccessibilityPage() {
         </p>
         <h3 className="text-xl font-semibold">Feedback</h3>
         <p className="leading-8 text-[#64748b]">
-          If you experience any difficulty accessing content on this website, or if you have suggestions for improvement, please contact us at hello@northstarreno.com. We will do our best to address your concerns promptly.
+          If you experience any difficulty accessing content on this website, or if you have suggestions for improvement, please contact us at hello@escarpmentdevelopments.com. We will do our best to address your concerns promptly.
         </p>
         <h3 className="text-xl font-semibold">Ontario Accessibility Considerations</h3>
         <p className="leading-8 text-[#64748b]">
