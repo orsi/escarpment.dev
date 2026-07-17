@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function ServicesPage() {
   const services = [
     {
@@ -45,32 +47,33 @@ export default function ServicesPage() {
   ];
 
   return (
-    <section className="bg-white px-6 sm:px-8 lg:px-10 pt-32 pb-16">
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-          <div>
-            <p className="mb-2 text-sm uppercase tracking-widest">Services</p>
-            <h2 className="max-w-3xl text-3xl font-semibold">
-              Renovation and contracting services for every stage of the
-              project.
-            </h2>
-          </div>
-          <p className="max-w-xl">
-            Whether you need a quick upgrade or a full-scale remodel, our crew
-            is equipped to handle it with reliable scheduling and careful
-            workmanship.
-          </p>
-        </div>
-
-        <div className="mt-6 grid gap-4 md:grid-cols-2">
-          <div className="overflow-hidden rounded border border-primary-dark/10 shadow-sm">
+    <>
+      <section className="bg-primary-dark text-white/95 pt-(--height-nav-collapsed) pb-2">
+        <div className="max-w-7xl mx-auto md:flex md:gap-8">
+          <div className="overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80"
               alt="Renovation work in progress"
               className="h-72 w-full object-cover"
             />
           </div>
-          <div className="overflow-hidden rounded border border-primary-dark/10 shadow-sm">
+
+          <div className="py-8 px-6 md:px-0">
+            <div>
+              <p className="text-sm uppercase tracking-widest">Services</p>
+              <h2 className="mt-1 text-3xl font-semibold">
+                Renovation and contracting services for every stage of the
+                project.
+              </h2>
+            </div>
+            <p className="mt-8">
+              Whether you need a quick upgrade or a full-scale remodel, our crew
+              is equipped to handle it with reliable scheduling and careful
+              workmanship.
+            </p>
+          </div>
+
+          <div className="overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1400&q=80"
               alt="Finished bathroom renovation"
@@ -78,26 +81,58 @@ export default function ServicesPage() {
             />
           </div>
         </div>
+      </section>
 
-        <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {services.map((service) => (
+      <section className="bg-white md:pt-16">
+        <div className="max-w-7xl mx-auto flex flex-col md:gap-16">
+          {services.map((service, i) => (
             <article
               key={service.title}
-              className="overflow-hidden rounded border border-primary-dark/10 bg-white shadow-sm"
+              className={`bg-white overflow-hidden md:grid md:grid-cols-2 md:items-center gap-8`}
             >
               <img
                 src={service.image}
                 alt={service.title}
-                className="h-56 w-full object-cover"
+                className={`h-56 w-full object-cover ${i % 2 === 0 ? "order-1" : ""}`}
               />
-              <div className="p-5">
+              <div className={`py-8 md:py-0 px-6 md:px-0 ${i % 2 === 0 ? "md:pl-6 md:text-right" : "md:pr-6"}`}>
                 <h3 className="mb-2 text-xl font-semibold">{service.title}</h3>
                 <p className="leading-7">{service.description}</p>
               </div>
             </article>
           ))}
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className="bg-linear-to-r from-secondary-dark to-secondary-light">
+        <div className="max-w-3xl mx-auto">
+          <Link
+            href="/contact"
+            className="block text-center tracking-wider group text-3xl px-6 sm:px-8 lg:px-10 py-16 text-black/60 mix-blend-hard-light"
+          >
+            Contact us to learn more about how we can make your dream home come
+            true
+            <svg
+              className="inline-block ml-2 -mt-1 transition group-hover:scale-110"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <g className="transition group-hover:transform-[translate(2px,-2px)]">
+                <path d="M15 3h6v6"></path>
+                <path d="M10 14 21 3"></path>
+              </g>
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            </svg>
+          </Link>
+        </div>
+      </section>
+    </>
   );
 }
