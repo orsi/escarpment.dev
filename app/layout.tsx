@@ -1,4 +1,4 @@
-import './global.css'
+import "./global.css";
 import { type ReactNode } from "react";
 import Navigation from "./_src/Navigation";
 import Footer from "./_src/Footer";
@@ -20,13 +20,11 @@ export default function Layout({ children }: { children: ReactNode }) {
         <title>Escarpment Developments</title>
         <link rel="icon" type="image/png" href={FaviconIcon.src}></link>
       </head>
-      <body>
+      <body className="font-roboto bg-primary-dark">
         <Intro />
-        <div className="flex min-h-screen flex-col bg-primary-dark">
-          <Navigation />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </div>
+        <Navigation />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

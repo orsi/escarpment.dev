@@ -10,26 +10,8 @@ import { useEffect, useState } from "react";
 import FacebookLogo from "./FacebookLogo";
 
 export default function Footer() {
-  const [stripeWidth, setStripeWidth] = useState(16);
-  const [stripeGap, setStripeGap] = useState(32);
-
-  useEffect(() => {
-    const pickNewStripe = () => {
-      const newSpace = Math.max(16, Math.ceil(Math.random() * 32));
-      const newWidth = Math.max(1, Math.ceil(Math.random() * newSpace - 2));
-      setStripeWidth(newWidth);
-      setStripeGap(newSpace);
-
-      timeout = setTimeout(pickNewStripe, 2000 + Math.random() * 2000);
-    };
-    let timeout = setTimeout(pickNewStripe, 2000 + Math.random() * 2000);
-    return () => {
-      clearTimeout(timeout);
-    };
-  }, []);
-
   return (
-    <footer className="mt-auto text-white px-6 py-9 text-footer-text bg-primary-dark sm:px-8 lg:px-10">
+    <footer className="bg-primary-dark text-white px-6 py-9 sm:px-8 lg:px-10">
       <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <h3 className="mb-3 text-muted text-sm uppercase tracking-[0.35em]">
@@ -102,38 +84,17 @@ export default function Footer() {
         </div>
       </div>
 
-      <motion.div
-        className="h-16 mt-6"
-        animate={{
-          background: `
-          repeating-linear-gradient(
-            45deg,
-            var(--color-secondary-light),
-            var(--color-secondary-light) ${stripeWidth}px,
-            var(--color-primary-dark) ${stripeWidth}px,
-            var(--color-primary-dark) ${stripeGap}px
-          )`,
-        }}
-        transition={{
-          duration: 1
-        }}
-        style={{
-          background: `
-          repeating-linear-gradient(
-            45deg,
-            var(--color-secondary-light),
-            var(--color-secondary-light) 0px,
-            var(--color-primary-dark) 0px,
-            var(--color-primary-dark) 30px
-          )`,
-        }}
-      />
-
       <div className="mx-auto mt-6 flex max-w-7xl flex-wrap items-center justify-between gap-3 border-t border-footer-text/15 pt-4 text-sm text-footer-text/70">
         <span>
-          © {new Date().toLocaleString("en-CA", { year: "numeric" })} Escarpment
-          Developments
+          {new Date().toLocaleString("en-CA", { year: "numeric" })} Escarpment
+          Developments ©
         </span>
+        <img
+          className="w-8"
+          src="/under-construction.gif"
+          title="UNDER CONSTRUCTION SINCE 1999"
+          alt="UNDER CONSTRUCTION SINCE 1999"
+        />
         <div className="flex flex-wrap gap-4">
           <Link href="/privacy" className="hover:text-accent-dark">
             Privacy Policy

@@ -63,14 +63,14 @@ export default function ServicesPage() {
         </div>
 
         <div className="mt-6 grid gap-4 md:grid-cols-2">
-          <div className="overflow-hidden rounded-[1.2rem] border border-primary-dark/10 shadow-lg">
+          <div className="overflow-hidden rounded border border-primary-dark/10 shadow-sm">
             <img
               src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80"
               alt="Renovation work in progress"
               className="h-72 w-full object-cover"
             />
           </div>
-          <div className="overflow-hidden rounded-[1.2rem] border border-primary-dark/10 shadow-lg">
+          <div className="overflow-hidden rounded border border-primary-dark/10 shadow-sm">
             <img
               src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1400&q=80"
               alt="Finished bathroom renovation"
@@ -83,7 +83,7 @@ export default function ServicesPage() {
           {services.map((service) => (
             <article
               key={service.title}
-              className="overflow-hidden rounded-[1.2rem] border border-primary-dark/10 bg-white shadow-lg"
+              className="overflow-hidden rounded border border-primary-dark/10 bg-white shadow-sm"
             >
               <img
                 src={service.image}

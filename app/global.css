@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -14,6 +15,8 @@
   --color-bg-light: var(--color-slate-50);
   --color-bg-dark: var(--color-slate-900);
 
+  --font-roboto: "Roboto", sans-serif;
+
   --height-nav: 6rem;
   --height-nav-collapsed: 3rem;
 
@@ -27,19 +30,4 @@
 
 html {
   height: 100%;
-}
-
-body {
-  background: var(--color-bg-light);
-  color: var(--color-text-dark);
-  font-family: Arial, Verdana, Tahoma, sans-serif;
-  min-height: 100%;
-  margin: 0;
-  position: relative;
-}
-
-img {
-  display: block;
-  width: 100%;
-  height: auto;
 }

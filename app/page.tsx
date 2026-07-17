@@ -124,6 +124,7 @@ export default function HomePage() {
                 width: "100%",
               }}
               transition={{
+                delay: 3.5,
                 duration: 0.8,
               }}
               viewport={{ once: true, margin: "-100px" }}
@@ -259,12 +260,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section>
+      <section className="bg-linear-to-r from-secondary-dark to-secondary-light">
         <a
           href={INSTAGRAM_ESCARPMENTDEVELOPMENTS_URL}
           target="_blank"
           rel="noreferrer"
-          className="block text-center tracking-wider group bg-linear-to-r from-secondary-dark to-secondary-light text-3xl px-6 sm:px-8 lg:px-10 py-16"
+          className="block text-center tracking-wider group text-3xl px-6 sm:px-8 lg:px-10 py-16 text-black/60 mix-blend-hard-light"
         >
           Follow our latest projects on Instagram
           <svg
