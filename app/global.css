@@ -8,7 +8,7 @@
   --color-primary-dark: hsl(208, 79%, 18%);
   --color-secondary-main: var(--color-gold);
   --color-secondary-light: hsl(42, 86%, 72%);
-  --color-secondary-dark: hsl(42, 59%, 29%);
+  --color-secondary-dark: hsl(34, 91%, 39%);
   --color-text-dark: var(--color-slate-900);
   --color-text-light: var(--color-slate-50);
   --color-bg-light: var(--color-slate-50);
@@ -35,10 +35,7 @@ body {
   font-family: Arial, Verdana, Tahoma, sans-serif;
   min-height: 100%;
   margin: 0;
-}
-
-a {
-  text-decoration: none;
+  position: relative;
 }
 
 img {
