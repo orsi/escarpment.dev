@@ -74,7 +74,7 @@ export default function AboutPage() {
             transition={{
               delay: 0.1,
             }}
-            viewport={{ margin: "-150px" }}
+            viewport={{ once: true, margin: "-150px" }}
           >
             <div>
               <img
@@ -103,7 +103,7 @@ export default function AboutPage() {
             transition={{
               delay: 0.2,
             }}
-            viewport={{ margin: "-150px" }}
+            viewport={{ once: true, margin: "-150px" }}
           >
             <div>
               <img
@@ -132,7 +132,7 @@ export default function AboutPage() {
             transition={{
               delay: 0.3,
             }}
-            viewport={{ margin: "-150px" }}
+            viewport={{ once: true, margin: "-150px" }}
           >
             <div>
               <img
