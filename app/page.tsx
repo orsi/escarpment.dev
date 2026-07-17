@@ -83,7 +83,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-black/55" />
         <div className="relative mx-auto flex min-h-125 max-w-7xl px-6 py-18 sm:py-24 sm:px-20">
           <div className="max-w-2xl text-white">
-            <p className="mb-3 text-sm uppercase tracking-[0.35em] text-white/80">
+            <p className="mb-3 text-sm uppercase tracking-widest text-white/80">
               <span className="font-black">Escarpment</span>{" "}
               <span className="font-thin">Developments</span>
             </p>
@@ -94,7 +94,7 @@ export default function HomePage() {
             <div className="mt-6 flex flex-wrap gap-4">
               <Link
                 href="/services"
-                className="inline-flex items-center rounded-3xl py-2 px-6 bg-primary-main text-secondary-light font-bold transition-transform duration-200 hover:-translate-y-0.5"
+                className="inline-flex items-center rounded-3xl py-2 px-6 bg-primary-main text-white font-bold transition-transform duration-200 hover:-translate-y-0.5"
               >
                 Explore services
               </Link>

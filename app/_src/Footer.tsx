@@ -14,7 +14,7 @@ export default function Footer() {
     <footer className="bg-primary-dark text-white px-6 py-9 sm:px-8 lg:px-10">
       <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <h3 className="mb-3 text-muted text-sm uppercase tracking-[0.35em]">
+          <h3 className="mb-3 text-muted text-sm uppercase tracking-widest">
             <span className="font-black">Escarpment</span>{" "}
             <span className="font-then">Developments</span>
           </h3>

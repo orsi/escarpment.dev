@@ -3,7 +3,7 @@ export default function ContactPage() {
     <section className="bg-white px-6 pt-32 pb-16 sm:px-8 lg:px-10">
       <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
         <div>
-          <p className="mb-2 text-sm uppercase tracking-[0.2em] ">
+          <p className="mb-2 text-sm uppercase tracking-widest">
             Get a quote
           </p>
           <h2 className="mb-4 text-3xl font-semibold">

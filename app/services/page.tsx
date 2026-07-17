@@ -49,7 +49,7 @@ export default function ServicesPage() {
       <div className="mx-auto max-w-7xl">
         <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p className="mb-2 text-sm uppercase tracking-[0.2em]">Services</p>
+            <p className="mb-2 text-sm uppercase tracking-widest">Services</p>
             <h2 className="max-w-3xl text-3xl font-semibold">
               Renovation and contracting services for every stage of the
               project.

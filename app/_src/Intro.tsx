@@ -1,21 +1,22 @@
 "use client";
 
+import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Intro() {
-  const [showIntro, setShowIntro] = useState(true);
-  useEffect(() => {
-    setTimeout(() => {
-      setShowIntro(false);
-    }, 2500);
-  }, []);
+  const pathname = usePathname();
+  const [showIntro, setShowIntro] = useState(pathname === "/");
+
   return (
     <AnimatePresence>
       {showIntro && (
         <motion.div
           className="fixed top-0 left-0 w-full h-full overflow-hidden z-1000 bg-primary-dark"
-          exit={{ opacity: 0, transition: { ease: "easeIn", duration: 1.5 } }}
+          exit={{
+            opacity: 0,
+            transition: { delay: 0.5, duration: 0.8, ease: "easeIn" },
+          }}
         >
           <div className="flex flex-col items-center justify-center h-full">
             <svg
@@ -89,6 +90,7 @@ export default function Intro() {
                   delay: 1.5,
                   ease: "easeOut",
                 }}
+                onAnimationComplete={() => setShowIntro(false)}
               >
                 DEVELOPMENTS
               </motion.div>
