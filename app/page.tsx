@@ -94,13 +94,13 @@ export default function HomePage() {
             <div className="mt-6 flex flex-wrap gap-4">
               <Link
                 href="/services"
-                className="inline-flex items-center rounded-3xl py-2 px-6 bg-primary-main text-white font-bold transition-transform duration-200 hover:-translate-y-0.5"
+                className="inline-flex items-center rounded-full py-2 px-6 bg-primary-main text-white font-bold transition-transform duration-200 hover:-translate-y-0.5"
               >
                 Explore services
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center rounded-3xl py-2 px-6 bg-white/15 font-bold text-white backdrop-blur transition-transform duration-200 hover:-translate-y-0.5"
+                className="inline-flex items-center rounded-full py-2 px-6 bg-white/15 font-bold text-white backdrop-blur transition-transform duration-200 hover:-translate-y-0.5"
               >
                 Get a quote
               </Link>
@@ -112,7 +112,7 @@ export default function HomePage() {
       <section className="px-6 py-16 bg-white sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-center gap-2">
-            <p className="shrink-0 text-sm uppercase tracking-widest text-muted">
+            <p className="shrink-0 text-sm uppercase tracking-widest ">
               About Us
             </p>
             <motion.div
@@ -130,36 +130,38 @@ export default function HomePage() {
               viewport={{ once: true, margin: "-100px" }}
             />
           </div>
-          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-            <h2 className="mt-10 max-w-3xl text-3xl font-semibold text-text">
-              From simple updates to full-scale transformations, we do the work
-              that makes homes feel better every day.
-            </h2>
-            <p className="max-w-xl text-muted">
-              We bring a practical, detail-driven approach to every project,
-              whether it is a quick refresh, a luxury bath upgrade, or a
-              complete home renovation.
-            </p>
-          </div>
+          <div className="mt-8 flex flex-col gap-6 lg:gap-10 lg:flex-row-reverse">
+            <div>
+              <h2 className="text-xl md:text-3xl font-semibold">
+                From simple updates to full-scale transformations, we do the
+                work that makes homes feel better every day.
+              </h2>
+              <p className="mt-8">
+                We bring a practical, detail-driven approach to every project,
+                whether it is a quick refresh, a luxury bath upgrade, or a
+                complete home renovation.
+              </p>
+            </div>
 
-          <div className="mt-10 grid gap-8 lg:grid-cols-3 lg:gap-16">
-            {highlights.map((item, i) => (
-              <motion.article
-                className="border-l-3 border-secondary-light pl-4 lg:border-0 lg:mt-10 lg:p-0"
-                initial={{ opacity: 0, transform: "translate(-20px, -20px)" }}
-                whileInView={{ opacity: 1, transform: "translate(0, 0)" }}
-                transition={{
-                  delay: i * 0.2,
-                }}
-                viewport={{ margin: "-150px" }}
-                key={item.title}
-              >
-                <h3 className="text-xl leading-none text-primary-main/90 font-bold text-muted">
-                  {item.title}
-                </h3>
-                <p className="mt-2 leading-7 text-muted">{item.text}</p>
-              </motion.article>
-            ))}
+            <div className="mt-8 lg:mt-0 lg:min-w-100 grid gap-8">
+              {highlights.map((item, i) => (
+                <motion.article
+                  className="border-l-4 border-secondary-light pl-4"
+                  initial={{ opacity: 0, transform: "translate(-20px, -20px)" }}
+                  whileInView={{ opacity: 1, transform: "translate(0, 0)" }}
+                  transition={{
+                    delay: i * 0.2,
+                  }}
+                  viewport={{ once: true, margin: "-150px" }}
+                  key={item.title}
+                >
+                  <h3 className="text-xl leading-none text-primary-main/90 font-bold ">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 leading-7 ">{item.text}</p>
+                </motion.article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -167,7 +169,7 @@ export default function HomePage() {
       <section className="bg-primary-main text-white/95 px-6 py-16 sm:px-8 lg:px-10">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-2 lg:items-start">
           <div className="mb-6">
-            <p className="mb-2 text-sm uppercase tracking-widest text-muted">
+            <p className="mb-2 text-sm uppercase tracking-widest ">
               Why clients choose us
             </p>
             <h2 className="text-3xl font-semibold text-text">
@@ -179,23 +181,21 @@ export default function HomePage() {
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             <div className="p-4 text-center rounded bg-primary-dark/60 border border-primary-dark/50">
               <strong className="mb-2 block text-xl font-semibold text-secondary-light">
-                <CountUp enableScrollSpy={true} end={20} />+ years
+                <CountUp scrollSpyOnce enableScrollSpy={true} end={20} />+ years
               </strong>
-              <span className="text-sm text-muted">
-                Of experience in trades
-              </span>
+              <span className="text-sm ">Of experience in trades</span>
             </div>
             <div className="p-4 text-center rounded bg-primary-dark/60 border border-primary-dark/50">
               <strong className="mb-2 block text-xl font-semibold text-secondary-light">
-                <CountUp enableScrollSpy={true} end={5} />+
+                <CountUp scrollSpyOnce enableScrollSpy={true} end={5} />+
               </strong>
-              <span className="text-sm text-muted">Core services offered</span>
+              <span className="text-sm ">Core services offered</span>
             </div>
             <div className="p-4 text-center rounded bg-primary-dark/60 border border-primary-dark/50">
               <strong className="mb-2 block text-xl font-semibold text-secondary-light">
-                <CountUp enableScrollSpy={true} end={100} />+
+                <CountUp scrollSpyOnce enableScrollSpy={true} end={100} />+
               </strong>
-              <span className="text-sm text-muted">
+              <span className="text-sm ">
                 Local projects rooted in the community
               </span>
             </div>
@@ -203,9 +203,7 @@ export default function HomePage() {
               <strong className="mb-2 block text-xl font-semibold text-secondary-light">
                 Customized
               </strong>
-              <span className="text-sm text-muted">
-                for your own taste and enjoyment
-              </span>
+              <span className="text-sm ">for your own taste and enjoyment</span>
             </div>
           </div>
         </div>
@@ -232,15 +230,13 @@ export default function HomePage() {
               opacity: 1,
               transform: "translateX(0)",
             }}
-            viewport={{ margin: "-150px" }}
+            viewport={{ once: true, margin: "-150px" }}
           >
-            <p className="text-sm uppercase tracking-widest text-muted">
-              Featured work
-            </p>
+            <p className="text-sm uppercase tracking-widest ">Featured work</p>
             <h2 className="mt-3 text-3xl font-semibold text-text">
               See how we turn rough spaces into refined, functional homes.
             </h2>
-            <p className="mt-10 text-muted">
+            <p className="mt-10 ">
               From foundational work to final trim, our team keeps projects
               moving with care and precision.
             </p>

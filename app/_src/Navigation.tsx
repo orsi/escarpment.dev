@@ -83,7 +83,7 @@ export default function Navigation() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="mt-2 last:mb-8 py-2 md:rounded-3xl md:px-6 md:m-0 md:last:mb-0 transition duration-250 md:hover:bg-primary-light/10 "
+                className="mt-2 last:mb-8 py-1 md:rounded-full md:px-6 md:m-0 md:last:mb-0 transition duration-250 md:hover:bg-primary-light/10 "
               >
                 {link.label}
               </Link>

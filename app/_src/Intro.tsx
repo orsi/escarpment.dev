@@ -63,14 +63,15 @@ export default function Intro() {
                 className="relative text-4xl font-extrabold tracking-wide"
                 initial={{
                   opacity: 0,
-                  transform: "translateX(-120px)",
+                  transform: "translateX(-24px)",
                 }}
                 animate={{
                   opacity: 1,
                   transform: "translateX(0)",
                 }}
                 transition={{
-                  delay: 1.2,
+                  delay: .9,
+                  duration: .7,
                   ease: "easeOut",
                 }}
               >
@@ -80,14 +81,15 @@ export default function Intro() {
                 className="ml-0.5 relative font-light tracking-[11.5px]"
                 initial={{
                   opacity: 0,
-                  transform: "translateX(120px)",
+                  transform: "translateX(24px)",
                 }}
                 animate={{
                   opacity: 1,
                   transform: "translateX(0)",
                 }}
                 transition={{
-                  delay: 1.5,
+                  delay: 1,
+                  duration: .7,
                   ease: "easeOut",
                 }}
                 onAnimationComplete={() => setShowIntro(false)}

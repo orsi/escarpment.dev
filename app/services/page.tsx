@@ -1,4 +1,8 @@
+"use client";
 import Link from "next/link";
+import { Fragment } from "react/jsx-runtime";
+import Logo from "../_src/Logo";
+import { motion } from "motion/react";
 
 export default function ServicesPage() {
   const services = [
@@ -48,58 +52,88 @@ export default function ServicesPage() {
 
   return (
     <>
-      <section className="bg-primary-dark text-white/95 pt-(--height-nav-collapsed) pb-2">
-        <div className="max-w-7xl mx-auto md:flex md:gap-8">
-          <div className="overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80"
-              alt="Renovation work in progress"
-              className="h-72 w-full object-cover"
-            />
+      <section className="bg-primary-dark text-white/95">
+        <div className="md:grid">
+          <div className="overflow-hidden row-1 col-1 md:max-w-[2560px] md:mx-auto md:grid md:grid-cols-2 md:gap-8">
+            <div className="col-1">
+              <img
+                src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80"
+                alt="Renovation work in progress"
+                className="aspect-video h-full w-full min-h-100 object-cover"
+              />
+            </div>
           </div>
 
-          <div className="py-8 px-6 md:px-0">
-            <div>
+          <div className="md:pt-(--height-nav-collapsed) row-1 col-1 md:max-w-7xl md:mx-auto md:grid md:grid-cols-2 md:gap-8 md:items-center">
+            <div className="col-2 py-8 px-6 md:pl-0">
               <p className="text-sm uppercase tracking-widest">Services</p>
               <h2 className="mt-1 text-3xl font-semibold">
                 Renovation and contracting services for every stage of the
                 project.
               </h2>
+              <p className="mt-8">
+                Whether you need a quick upgrade or a full-scale remodel, our
+                crew is equipped to handle it with reliable scheduling and
+                careful workmanship.
+              </p>
             </div>
-            <p className="mt-8">
-              Whether you need a quick upgrade or a full-scale remodel, our crew
-              is equipped to handle it with reliable scheduling and careful
-              workmanship.
-            </p>
-          </div>
-
-          <div className="overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1400&q=80"
-              alt="Finished bathroom renovation"
-              className="h-72 w-full object-cover"
-            />
           </div>
         </div>
       </section>
 
-      <section className="bg-white md:pt-16">
-        <div className="max-w-7xl mx-auto flex flex-col md:gap-16">
+      <section className="bg-white md:py-16">
+        <div className="max-w-7xl mx-auto flex flex-col items-center md:gap-8 md:px-8">
           {services.map((service, i) => (
-            <article
-              key={service.title}
-              className={`bg-white overflow-hidden md:grid md:grid-cols-2 md:items-center gap-8`}
-            >
-              <img
-                src={service.image}
-                alt={service.title}
-                className={`h-56 w-full object-cover ${i % 2 === 0 ? "order-1" : ""}`}
-              />
-              <div className={`py-8 md:py-0 px-6 md:px-0 ${i % 2 === 0 ? "md:pl-6 md:text-right" : "md:pr-6"}`}>
-                <h3 className="mb-2 text-xl font-semibold">{service.title}</h3>
-                <p className="leading-7">{service.description}</p>
-              </div>
-            </article>
+            <Fragment key={service.title}>
+              <article
+                className={`overflow-hidden w-full items-center md:flex md:gap-8${i % 2 !== 0 ? " md:flex-row-reverse" : ""}`}
+              >
+                <motion.div
+                  className={`py-8 px-6 md:px-0 md:w-2/5`}
+                  initial={{
+                    opacity: 0,
+                    transform: `translate(${i % 2 === 0 ? "-25px,-25px" : "25px,-25px"})`,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    transform: "translate(0)",
+                  }}
+                  transition={{
+                    delay: 0.2,
+                  }}
+                  viewport={{ once: true, margin: "-150px" }}
+                >
+                  <h3 className="mb-2 text-xl font-semibold">
+                    {service.title}
+                  </h3>
+                  <p className="leading-7">{service.description}</p>
+                </motion.div>
+                <div className="md:w-3/5 overflow-hidden">
+                  <motion.img
+                    src={service.image}
+                    alt={service.title}
+                    className={`h-full w-full object-cover aspect-video`}
+                    initial={{
+                      opacity: 0,
+                      transform: `translateX(${i % 2 === 0 ? "25px" : "-25px"})`,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      transform: "translateY(0)",
+                    }}
+                    transition={{
+                      delay: 0.2,
+                    }}
+                    viewport={{ once: true, margin: "-150px" }}
+                  />
+                </div>
+              </article>
+              {i !== services.length - 1 && (
+                <div className="mt-4">
+                  <Logo className="rotate-180 w-8 text-primary-main/30" />
+                </div>
+              )}
+            </Fragment>
           ))}
         </div>
       </section>
