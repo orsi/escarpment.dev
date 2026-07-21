@@ -75,12 +75,11 @@ export default function HomePage() {
           muted
           loop
           playsInline
-          poster="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1600&q=80"
           className="absolute inset-0 h-full w-full object-cover"
         >
-          <source src="/hero.mp4" type="video/mp4" />
+          <source src="/escarpment-preview.mov" />
         </video>
-        <div className="absolute inset-0 bg-black/55" />
+        <div className="absolute inset-0 bg-black/10" />
         <div className="relative mx-auto flex min-h-125 max-w-7xl px-6 py-18 sm:py-24 sm:px-20">
           <div className="max-w-2xl text-white">
             <p className="mb-3 text-sm uppercase tracking-widest text-white/80">
@@ -209,16 +208,27 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-primary-dark text-white/95 overflow-hidden py-16 px-6 sm:px-8 lg:py-32 lg:px-10">
-        <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-2 lg:items-start">
+      <section className="bg-black">
+        <div className="max-w-7xl mx-auto">
+          <video controls className="h-full w-full aspect-video">
+            <source src="/escarpment-dreamlivegrow.mov" />
+          </video>
+        </div>
+      </section>
+
+      <section className="bg-primary-dark text-white/95 overflow-hidden py-16 px-6 sm:px-8 lg:px-10">
+        <div className="max-w-7xl mx-auto grid gap-8 md:grid-cols-2 md:items-center">
           <div className="overflow-hidden">
-            <iframe
-              src="https://www.youtube.com/embed/ScMzIvxBSi4?rel=0&modestbranding=1"
-              title="Renovation project overview"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="min-h-80 w-full"
-            />
+            <video
+              muted
+              autoPlay
+              loop
+              playsInline
+              controls
+              className="w-full object-cover md:aspect-square"
+            >
+              <source src="/feature-work.mp4" />
+            </video>
           </div>
 
           <motion.div

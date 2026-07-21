@@ -10,43 +10,37 @@ export default function ServicesPage() {
       title: "Home Renovations",
       description:
         "From kitchens and baths to whole-home transformations, we make every renovation feel intentional, polished, and built to last.",
-      image:
-        "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80",
+      image: "/services-renovations.jpg",
     },
     {
       title: "Flooring & Tile",
       description:
         "We install hardwood, luxury vinyl, tile, and ceramic surfaces with precision and clean finishing details.",
-      image:
-        "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=900&q=80",
+      image: "/services-flooring2.jpg",
     },
     {
       title: "Showers & Wet Areas",
       description:
         "Custom shower builds, waterproofing, and upscale tile work that bring comfort and style to everyday routines.",
-      image:
-        "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80",
+      image: "/services-showers.jpg",
     },
     {
       title: "Drywall & Finishing",
       description:
         "Seamless drywall repairs, new installs, texturing, and prep work for a flawless finish before paint goes on.",
-      image:
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+      image: "/services-drywall.jpg",
     },
     {
       title: "Painting & Trim",
       description:
         "Interior and exterior painting, cabinet refreshes, trim details, and color consultations that complete the look.",
-      image:
-        "https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=900&q=80",
+      image: "/services-painting.jpg",
     },
     {
       title: "Property Buying & Selling Support",
       description:
         "We help homeowners and investors assess, prepare, and move through property transactions with practical guidance.",
-      image:
-        "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=900&q=80",
+      image: "/services-retail.jpg",
     },
   ];
 
@@ -56,11 +50,17 @@ export default function ServicesPage() {
         <div className="md:grid">
           <div className="overflow-hidden row-1 col-1 md:max-w-[2560px] md:mx-auto md:grid md:grid-cols-2 md:gap-8">
             <div className="col-1">
-              <img
-                src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80"
-                alt="Renovation work in progress"
-                className="aspect-video h-full w-full min-h-100 object-cover"
-              />
+              <div className="relative overflow-hidden aspect-video h-full w-full min-h-100 object-cover">
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="absolute inset-0 h-full w-full object-cover"
+                >
+                  <source src="/services-splash.mp4" type="video/mp4" />
+                </video>
+              </div>
             </div>
           </div>
 

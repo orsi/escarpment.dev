@@ -50,7 +50,6 @@ export default function AboutPage() {
               muted
               loop
               playsInline
-              poster="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1600&q=80"
               className="absolute inset-0 h-full w-full object-cover"
             >
               <source src="/about.mp4" type="video/mp4" />
@@ -78,8 +77,8 @@ export default function AboutPage() {
           >
             <div>
               <img
-                src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1400&q=80"
-                alt="Finished bathroom renovation"
+                src="/tweedside.jpg"
+                alt="A view of the side of a barn with a wooden staircase leading to the upper level"
                 className="aspect-video w-full object-cover"
               />
             </div>
@@ -107,9 +106,9 @@ export default function AboutPage() {
           >
             <div>
               <img
-                src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80"
-                alt="Renovation work in progress"
-                className="aspect-video w-full object-cover"
+                src="/about-renovations.jpg"
+                alt="Ceramic tile renovation work in progress"
+                className="aspect-video w-full object-cover object-bottom"
               />
             </div>
             <div className="py-6 px-8">
@@ -136,9 +135,9 @@ export default function AboutPage() {
           >
             <div>
               <img
-                src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80"
-                alt="Renovation work in progress"
-                className="aspect-video w-full object-cover"
+                src="/about-repairs.jpg"
+                alt="A man repairing a window frame"
+                className="aspect-video w-full object-cover object-bottom"
               />
             </div>
             <div className="py-6 px-8">
@@ -257,9 +256,9 @@ export default function AboutPage() {
           <div className="md:grid md:grid-cols-2 md:gap-8 md:items-center">
             <div className="aspect-video overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1200&q=80"
-                alt="Construction team at work"
-                className="w-full object-cover"
+                src="/serving-ontario.jpg"
+                alt="Construction work"
+                className="w-full aspect-square object-cover object-bottom"
               />
             </div>
             <div className="px-6 lg:px-0 py-16 md:py-0">
