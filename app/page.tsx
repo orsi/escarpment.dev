@@ -75,21 +75,21 @@ export default function HomePage() {
           muted
           loop
           playsInline
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover blur-sm saturate-150"
         >
-          <source src="/escarpment-preview.mov" />
+          <source src="/escarpment-preview2.mov" />
         </video>
         <div className="absolute inset-0 bg-black/10" />
-        <div className="relative mx-auto flex min-h-125 max-w-7xl px-6 py-18 sm:py-24 sm:px-20">
-          <div className="max-w-2xl text-white">
-            <p className="mb-3 text-sm uppercase tracking-widest text-white/80">
+        <div className="relative mx-auto flex min-h-125 max-w-7xl px-6 py-18 sm:py-24 sm:px-20 text-white/60 isolate mix-blend-plus-lighter">
+          <div className="max-w-2xl">
+            <p className="mb-3 text-sm uppercase tracking-widest">
               <span className="font-black">Escarpment</span>{" "}
               <span className="font-thin">Developments</span>
             </p>
             <h1 className="mb-4 text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
               Beautiful spaces, built to last.
             </h1>
-            <p className="max-w-xl text-lg text-white/80">Dream. Live. Grow.</p>
+            <p className="max-w-xl text-lg">Dream. Live. Grow.</p>
             <div className="mt-6 flex flex-wrap gap-4">
               <Link
                 href="/services"
