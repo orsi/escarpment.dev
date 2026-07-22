@@ -41,8 +41,14 @@ export default function TermsPage() {
         </p>
         <h3 className="text-xl font-semibold">Contact</h3>
         <p className="leading-8">
-          For questions about these Terms of Use, please contact us at
-          hello@escarpmentdevelopments.com.
+          For questions about these Terms of Use, please contact us at{" "}
+          <a
+            href="mailto:hello@escarpment.dev"
+            style={{ textDecoration: "underline" }}
+          >
+            hello@escarpment.dev
+          </a>
+          .
         </p>
       </div>
     </section>

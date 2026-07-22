@@ -123,7 +123,7 @@ export default function HomePage() {
                 width: "100%",
               }}
               transition={{
-                delay: 3.5,
+                delay: .3,
                 duration: 0.8,
               }}
               viewport={{ once: true, margin: "-100px" }}

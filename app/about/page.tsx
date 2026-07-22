@@ -257,7 +257,7 @@ export default function AboutPage() {
             <div className="aspect-video overflow-hidden">
               <img
                 src="/serving-ontario.jpg"
-                alt="Construction work"
+                alt="A room under construction work"
                 className="w-full aspect-square object-cover object-bottom"
               />
             </div>

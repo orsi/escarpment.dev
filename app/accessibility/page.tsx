@@ -22,9 +22,14 @@ export default function AccessibilityPage() {
         <h3 className="text-xl font-semibold">Feedback</h3>
         <p className="leading-8">
           If you experience any difficulty accessing content on this website, or
-          if you have suggestions for improvement, please contact us at
-          hello@escarpmentdevelopments.com. We will do our best to address your
-          concerns promptly.
+          if you have suggestions for improvement, please contact us at{" "}
+          <a
+            href="mailto:hello@escarpment.dev"
+            style={{ textDecoration: "underline" }}
+          >
+            hello@escarpment.dev
+          </a>
+          . We will do our best to address your concerns promptly.
         </p>
         <h3 className="text-xl font-semibold">
           Ontario Accessibility Considerations

@@ -44,9 +44,20 @@ export default function PrivacyPage() {
         <h3 className="text-xl font-semibold">Contact Us</h3>
         <p className="leading-8">
           If you have any questions about this Privacy Policy, please contact us
-          at hello@escarpmentdevelopments.com or at 221 Market Street, Denver,
-          CO 80202. Please note that our services are currently offered in
-          Ontario, Canada.
+          at:
+        </p>
+        <p>
+          1076 Mud St E<br />
+          <a
+            href="mailto:hello@escarpment.dev"
+            style={{ textDecoration: "underline" }}
+          >
+            hello@escarpment.dev
+          </a>
+          <br />
+          Stoney Creek, Ontario
+          <br />
+          L8J 3C2
         </p>
       </div>
     </section>

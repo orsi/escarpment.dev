@@ -53,7 +53,9 @@ export default function Footer() {
           <ul className="space-y-2 text-sm text-footer-text/80">
             <li>1076 Mud St E</li>
             <li>Stoney Creek, ON L8J 3C2</li>
-            <li>billdambrosio@hotmail.com</li>
+            <li>
+              <a href="mailto:hello@escarpment.dev">hello@escarpment.dev</a>
+            </li>
             <li>(905) 570-6205</li>
           </ul>
         </div>
@@ -67,7 +69,7 @@ export default function Footer() {
                 rel="noreferrer"
                 className="block w-8"
               >
-                <img src={"/instagram.png"} />
+                <img src={"/instagram.png"} alt="Instagram logo" />
               </a>
             </li>
             <li>
