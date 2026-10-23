@@ -1,8 +1,11 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react/jsx-runtime";
 import Logo from "../_src/Logo";
 import { motion } from "motion/react";
+
+const MotionImage = motion(Image);
 
 export default function ServicesPage() {
   const services = [
@@ -68,13 +71,12 @@ export default function ServicesPage() {
             <div className="col-2 py-8 px-6 md:pl-0">
               <p className="text-sm uppercase tracking-widest">Services</p>
               <h2 className="mt-1 text-3xl font-semibold">
-                Renovation and contracting services for every stage of the
-                project.
+                Renovation and contracting services for homes throughout
+                Stoney Creek, Hamilton, the GTA, and the Golden Horseshoe.
               </h2>
               <p className="mt-8">
                 Whether you need a quick upgrade or a full-scale remodel, our
-                crew is equipped to handle it with reliable scheduling and
-                careful workmanship.
+                team delivers dependable workmanship for homeowners.
               </p>
             </div>
           </div>
@@ -109,10 +111,12 @@ export default function ServicesPage() {
                   <p className="leading-7">{service.description}</p>
                 </motion.div>
                 <div className="md:w-3/5 overflow-hidden">
-                  <motion.img
+                  <MotionImage
                     src={service.image}
                     alt={service.title}
-                    className={`h-full w-full object-cover aspect-video`}
+                    width={1200}
+                    height={675}
+                    className="h-full w-full object-cover aspect-video"
                     initial={{
                       opacity: 0,
                       transform: `translateX(${i % 2 === 0 ? "25px" : "-25px"})`,

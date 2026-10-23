@@ -42,12 +42,13 @@ export default function ContactPage() {
           <div>
             <p className="mb-2 text-sm uppercase tracking-widest">Contact us</p>
             <h2 className="mb-4 text-3xl font-semibold">
-              Tell us about your project and we’ll follow up with a tailored
-              response.
+              Request a quote for your renovation or property improvement project.
             </h2>
             <p className="leading-7">
-              We're ready to help with renovations, home prep, flooring,
-              ceramics, showers, drywalling, painting, and more.
+              Based in Stoney Creek, Escarpment Developments serves homeowners
+              across Hamilton, the Greater Toronto and Hamilton Area, and the
+              Golden Horseshoe with renovations, flooring, tile, showers,
+              drywall, painting, and more.
             </p>
           </div>
         </div>

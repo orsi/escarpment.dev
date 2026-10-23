@@ -20,6 +20,47 @@ const highlights = [
   },
 ];
 
+const faqs = [
+  {
+    question: "Do you provide renovation services in Stoney Creek and the GTHA?",
+    answer:
+      "Yes. Escarpment Developments is based in Stoney Creek and serves homeowners across Hamilton, the Greater Toronto and Hamilton Area, and the Golden Horseshoe.",
+  },
+  {
+    question: "What types of home improvement services do you offer?",
+    answer:
+      "We handle a range of renovation and finishing services, including flooring, tile, showers, drywall, painting, trim, and property improvement work.",
+  },
+  {
+    question: "Can you help with both smaller upgrades and larger remodels?",
+    answer:
+      "Absolutely. We work on everything from focused refreshes to full renovation projects, with careful planning, quality workmanship, and a practical approach to timelines.",
+  },
+];
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  name: "Escarpment Developments",
+  description:
+    "Home renovation, flooring, drywall, painting, and property improvement services in Stoney Creek, Hamilton, the GTHA, and the Golden Horseshoe.",
+  areaServed: [
+    "Stoney Creek",
+    "Hamilton",
+    "Greater Toronto and Hamilton Area",
+    "Golden Horseshoe",
+  ],
+  url: "https://escarpment.dev",
+  knowsAbout: [
+    "Home renovations",
+    "Bathroom renovations",
+    "Flooring and tile",
+    "Drywall and finishing",
+    "Painting and trim",
+    "Property improvement services",
+  ],
+};
+
 // interface InstagramApiResponse {
 //   data: {
 //     id: string;
@@ -69,6 +110,10 @@ export default function HomePage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
       <section className="relative isolate overflow-hidden">
         <video
           autoPlay
@@ -87,9 +132,13 @@ export default function HomePage() {
               <span className="font-thin">Developments</span>
             </p>
             <h1 className="mb-4 text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
-              Beautiful spaces, built to last.
+              Home renovations in Stoney Creek, Hamilton, and the GTHA.
             </h1>
-            <p className="max-w-xl text-lg">Dream. Live. Grow.</p>
+            <p className="max-w-xl text-lg">
+              Escarpment Developments creates beautifully finished spaces for
+              homeowners across Stoney Creek, Hamilton, the GTA, and the Golden
+              Horseshoe.
+            </p>
             <div className="mt-6 flex flex-wrap gap-4">
               <Link
                 href="/services"
@@ -263,6 +312,54 @@ export default function HomePage() {
               </li>
             </ul>
           </motion.div>
+        </div>
+      </section>
+
+      <section className="px-6 py-16 bg-white sm:px-8 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex items-center gap-2">
+            <p className="shrink-0 text-sm uppercase tracking-widest">FAQ</p>
+            <motion.div
+              className="bg-secondary-light h-1 w-full"
+              initial={{ width: 0 }}
+              whileInView={{ width: "100%" }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              viewport={{ once: true, margin: "-100px" }}
+            />
+          </div>
+
+          <div className="mt-8 lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)] lg:items-start lg:gap-10">
+            <div className="mb-6 lg:mb-0">
+              <h2 className="text-xl md:text-3xl font-semibold">
+                Common questions from homeowners in Stoney Creek and the GTHA.
+              </h2>
+              <p className="mt-6 leading-7 text-slate-700">
+                We work with families and property owners throughout the region,
+                helping them plan practical improvements that feel polished,
+                functional, and built to last.
+              </p>
+            </div>
+
+            <div className="space-y-5">
+              {faqs.map((faq, i) => (
+                <motion.article
+                  key={faq.question}
+                  className="rounded-lg border border-slate-200 bg-slate-50 p-4 sm:p-5"
+                  initial={{ opacity: 0, transform: "translate(-20px, -20px)" }}
+                  whileInView={{ opacity: 1, transform: "translate(0, 0)" }}
+                  transition={{ delay: i * 0.2 }}
+                  viewport={{ once: true, margin: "-150px" }}
+                >
+                  <h3 className="text-base sm:text-lg font-semibold text-primary-dark">
+                    {faq.question}
+                  </h3>
+                  <p className="mt-2 text-sm sm:text-base leading-7 text-slate-700">
+                    {faq.answer}
+                  </p>
+                </motion.article>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

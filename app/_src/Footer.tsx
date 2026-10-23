@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import {
   FACEBOOK_ESCARPMENTDEVELOPMENTS_URL,
@@ -56,7 +57,9 @@ export default function Footer() {
             <li>
               <a href="mailto:hello@escarpment.dev">hello@escarpment.dev</a>
             </li>
-            <li>(905) 570-6205</li>
+            <li>
+              <a href="tel:+19055706205">(905) 570-6205</a>
+            </li>
           </ul>
         </div>
         <div>
@@ -69,7 +72,13 @@ export default function Footer() {
                 rel="noreferrer"
                 className="block w-8"
               >
-                <img src={"/instagram.png"} alt="Instagram logo" />
+                <Image
+                  src="/instagram.png"
+                  alt="Instagram logo"
+                  width={32}
+                  height={32}
+                  className="h-8 w-8"
+                />
               </a>
             </li>
             <li>
@@ -91,11 +100,13 @@ export default function Footer() {
           {new Date().toLocaleString("en-CA", { year: "numeric" })} Escarpment
           Developments ©
         </span>
-        <img
+        <Image
           className="w-8"
           src="/under-construction.gif"
           title="UNDER CONSTRUCTION SINCE 1999"
           alt="UNDER CONSTRUCTION SINCE 1999"
+          width={32}
+          height={32}
         />
         <div className="flex flex-wrap gap-4">
           <Link href="/privacy" className="hover:text-accent-dark">
