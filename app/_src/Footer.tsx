@@ -33,17 +33,17 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-accent-dark">
+              <Link href="/about/" className="hover:text-accent-dark">
                 About
               </Link>
             </li>
             <li>
-              <Link href="/services" className="hover:text-accent-dark">
+              <Link href="/services/" className="hover:text-accent-dark">
                 Services
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-accent-dark">
+              <Link href="/contact/" className="hover:text-accent-dark">
                 Contact
               </Link>
             </li>
@@ -109,13 +109,13 @@ export default function Footer() {
           height={32}
         />
         <div className="flex flex-wrap gap-4">
-          <Link href="/privacy" className="hover:text-accent-dark">
+          <Link href="/privacy/" className="hover:text-accent-dark">
             Privacy Policy
           </Link>
-          <Link href="/terms" className="hover:text-accent-dark">
+          <Link href="/terms/" className="hover:text-accent-dark">
             Terms of Use
           </Link>
-          <Link href="/accessibility" className="hover:text-accent-dark">
+          <Link href="/accessibility/" className="hover:text-accent-dark">
             Accessibility
           </Link>
         </div>

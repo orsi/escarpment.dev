@@ -151,13 +151,13 @@ export default function HomePage() {
               </p>
               <div className="mt-4 flex flex-wrap gap-4">
                 <Link
-                  href="/services"
+                  href="/services/"
                   className="bg-primary-main inline-flex items-center rounded-full px-6 py-2 font-bold text-white transition-transform duration-200 hover:-translate-y-0.5"
                 >
                   Explore services
                 </Link>
                 <Link
-                  href="/contact"
+                  href="/contact/"
                   className="inline-flex items-center rounded-full bg-white/10 px-6 py-2 font-bold text-white transition-transform duration-200 hover:-translate-y-0.5"
                 >
                   Get a quote

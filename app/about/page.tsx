@@ -271,7 +271,7 @@ export default function AboutPage() {
               </p>
               <Link
                 className="mt-4 inline-flex items-center rounded-full py-2 px-6 bg-primary-main text-white font-bold transition-transform duration-200 hover:-translate-y-0.5"
-                href="/contact"
+                href="/contact/"
               >
                 Contact us now
               </Link>

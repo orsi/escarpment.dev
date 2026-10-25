@@ -145,7 +145,7 @@ export default function ServicesPage() {
       <section className="bg-linear-to-r from-secondary-dark to-secondary-light">
         <div className="max-w-3xl mx-auto">
           <Link
-            href="/contact"
+            href="/contact/"
             className="block text-center tracking-wider group text-3xl px-6 sm:px-8 lg:px-10 py-16 text-black/60 mix-blend-hard-light"
           >
             Contact us to learn more about how we can make your dream home come
