@@ -46,9 +46,8 @@ export default function ContactPage() {
             </h2>
             <p className="leading-7">
               Based in Stoney Creek, Escarpment Developments serves homeowners
-              across Hamilton, the Greater Toronto and Hamilton Area, and the
-              Golden Horseshoe with renovations, flooring, tile, showers,
-              drywall, painting, and more.
+              across Hamilton and the Greater Toronto Area with renovations,
+              flooring, tile, showers, drywall, painting, and more.
             </p>
           </div>
         </div>

@@ -9,19 +9,19 @@ export const metadata = {
   metadataBase: new URL("https://escarpment.dev"),
   title: {
     default:
-      "Escarpment Developments | Home Renovations in Stoney Creek & the GTHA",
+      "Escarpment Developments | Home Renovations in Stoney Creek, Hamilton, and the GTA",
     template: "%s | Escarpment Developments",
   },
   description:
-    "Escarpment Developments provides home renovations, flooring, tile, drywall, painting, and property improvement services across Stoney Creek, Hamilton, the GTHA, and the Golden Horseshoe.",
+    "Escarpment Developments provides home renovations, flooring, tile, drywall, painting, and property improvement services across Stoney Creek, Hamilton, and the GTA.",
   keywords: [
     "home renovations Stoney Creek",
     "renovation contractor Hamilton",
-    "flooring and tile GTHA",
+    "flooring and tile GTA",
     "bathroom renovations Stoney Creek",
-    "drywall and finishing Golden Horseshoe",
+    "drywall and finishing GTA",
     "painting and trim Hamilton",
-    "property improvements GTHA",
+    "property improvements GTA",
     "home renovation services Stoney Creek",
   ],
   alternates: {
@@ -32,17 +32,17 @@ export const metadata = {
     url: "https://escarpment.dev",
     siteName: "Escarpment Developments",
     title:
-      "Escarpment Developments | Home Renovations in Stoney Creek & the GTHA",
+      "Escarpment Developments | Home Renovations in Stoney Creek, Hamilton, and the GTA",
     description:
-      "Full-service renovation, flooring, and property improvement solutions for homeowners across Stoney Creek, Hamilton, and the Greater Toronto and Hamilton Area.",
+      "Full-service renovation, flooring, and property improvement solutions for homeowners across Stoney Creek, Hamilton, and the Greater Toronto Area.",
     images: ["/logo.png"],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Escarpment Developments | Home Renovations in Stoney Creek & the GTHA",
+      "Escarpment Developments | Home Renovations in Stoney Creek, Hamilton, and the GTA",
     description:
-      "Home renovation, flooring, painting, and property improvement services for Stoney Creek, Hamilton, and the Golden Horseshoe.",
+      "Home renovation, flooring, painting, and property improvement services for Stoney Creek, Hamilton, and the Greater Toronto Area.",
     images: ["/logo.png"],
   },
 };

@@ -72,7 +72,7 @@ export default function ServicesPage() {
               <p className="text-sm uppercase tracking-widest">Services</p>
               <h2 className="mt-1 text-3xl font-semibold">
                 Renovation and contracting services for homes throughout
-                Stoney Creek, Hamilton, the GTA, and the Golden Horseshoe.
+                Stoney Creek, Hamilton, and the GTA.
               </h2>
               <p className="mt-8">
                 Whether you need a quick upgrade or a full-scale remodel, our

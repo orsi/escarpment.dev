@@ -22,9 +22,9 @@ const highlights = [
 
 const faqs = [
   {
-    question: "Do you provide renovation services in Stoney Creek and the GTHA?",
+    question: "Do you provide renovation services in Stoney Creek and Hamilton?",
     answer:
-      "Yes. Escarpment Developments is based in Stoney Creek and serves homeowners across Hamilton, the Greater Toronto and Hamilton Area, and the Golden Horseshoe.",
+      "Yes. Escarpment Developments is based in Stoney Creek and serves homeowners across Hamilton and the Greater Toronto Area.",
   },
   {
     question: "What types of home improvement services do you offer?",
@@ -43,12 +43,11 @@ const localBusinessSchema = {
   "@type": "HomeAndConstructionBusiness",
   name: "Escarpment Developments",
   description:
-    "Home renovation, flooring, drywall, painting, and property improvement services in Stoney Creek, Hamilton, the GTHA, and the Golden Horseshoe.",
+    "Home renovation, flooring, drywall, painting, and property improvement services in Stoney Creek, Hamilton, and the Greater Toronto Area.",
   areaServed: [
     "Stoney Creek",
     "Hamilton",
-    "Greater Toronto and Hamilton Area",
-    "Golden Horseshoe",
+    "Greater Toronto Area",
   ],
   url: "https://escarpment.dev",
   knowsAbout: [
@@ -112,55 +111,68 @@ export default function HomePage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusinessSchema),
+        }}
       />
-      <section className="relative isolate overflow-hidden">
+      <section className="relative isolate mx-auto max-w-[1900px] overflow-hidden">
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="absolute inset-0 h-full w-full object-cover blur-sm saturate-150"
+          className="absolute inset-0 h-full w-full object-cover"
         >
-          <source src="/escarpment-preview2.mov" />
+          <source
+            src="/hero-360p.mp4"
+            type="video/mp4"
+            media="(max-width: 640px)"
+          />
+          <source
+            src="/hero-720p.mp4"
+            type="video/mp4"
+            media="(max-width: 1280px)"
+          />
+          <source src="/hero-1080p.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black/10" />
-        <div className="relative mx-auto flex min-h-125 max-w-7xl px-6 py-18 sm:py-24 sm:px-20 text-white/60 isolate mix-blend-plus-lighter">
+        <div className="absolute inset-0 bg-black/20" />
+        <div className="relative mx-auto flex min-h-125 w-full max-w-7xl px-6 py-18 text-white sm:px-20 sm:py-24">
           <div className="max-w-2xl">
-            <p className="mb-3 text-sm uppercase tracking-widest">
+            <p className="mb-3 text-sm tracking-widest uppercase">
               <span className="font-black">Escarpment</span>{" "}
               <span className="font-thin">Developments</span>
             </p>
-            <h1 className="mb-4 text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
-              Home renovations in Stoney Creek, Hamilton, and the GTHA.
-            </h1>
-            <p className="max-w-xl text-lg">
-              Escarpment Developments creates beautifully finished spaces for
-              homeowners across Stoney Creek, Hamilton, the GTA, and the Golden
-              Horseshoe.
-            </p>
-            <div className="mt-6 flex flex-wrap gap-4">
-              <Link
-                href="/services"
-                className="inline-flex items-center rounded-full py-2 px-6 bg-primary-main text-white font-bold transition-transform duration-200 hover:-translate-y-0.5"
-              >
-                Explore services
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center rounded-full py-2 px-6 bg-white/15 font-bold text-white backdrop-blur transition-transform duration-200 hover:-translate-y-0.5"
-              >
-                Get a quote
-              </Link>
+            <div className="rounded border border-white/10 bg-black/10 px-6 py-4 backdrop-blur-sm">
+              <h1 className="text-3xl leading-tight font-semibold md:text-4xl">
+                Home renovations in Stoney Creek, Hamilton, and the GTA.
+              </h1>
+              <p className="mt-4 text-lg">
+                Escarpment Developments creates beautifully finished spaces for
+                homeowners across Stoney Creek, Hamilton, and the GTA.
+              </p>
+              <div className="mt-4 flex flex-wrap gap-4">
+                <Link
+                  href="/services"
+                  className="bg-primary-main inline-flex items-center rounded-full px-6 py-2 font-bold text-white transition-transform duration-200 hover:-translate-y-0.5"
+                >
+                  Explore services
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center rounded-full bg-white/10 px-6 py-2 font-bold text-white transition-transform duration-200 hover:-translate-y-0.5"
+                >
+                  Get a quote
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="px-6 py-16 bg-white sm:px-8 lg:px-10">
+      <section className="bg-white px-6 py-16 sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-center gap-2">
-            <p className="shrink-0 text-sm uppercase tracking-widest ">
+            <p className="shrink-0 text-sm tracking-widest uppercase">
               About Us
             </p>
             <motion.div
@@ -172,15 +184,15 @@ export default function HomePage() {
                 width: "100%",
               }}
               transition={{
-                delay: .3,
+                delay: 0.3,
                 duration: 0.8,
               }}
               viewport={{ once: true, margin: "-100px" }}
             />
           </div>
-          <div className="mt-8 flex flex-col gap-6 lg:gap-10 lg:flex-row-reverse">
-            <div>
-              <h2 className="text-xl md:text-3xl font-semibold">
+          <div className="mt-8 flex flex-col gap-6 lg:flex-row lg:gap-10">
+            <div className="lg:w-1/2">
+              <h2 className="text-xl font-semibold md:text-3xl">
                 From simple updates to full-scale transformations, we do the
                 work that makes homes feel better every day.
               </h2>
@@ -191,10 +203,10 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="mt-8 lg:mt-0 lg:min-w-100 grid gap-8">
+            <div className="mt-8 grid gap-8 lg:mt-0 lg:w-1/2 lg:min-w-100">
               {highlights.map((item, i) => (
                 <motion.article
-                  className="border-l-4 border-secondary-light pl-4"
+                  className="pl-0"
                   initial={{ opacity: 0, transform: "translate(-20px, -20px)" }}
                   whileInView={{ opacity: 1, transform: "translate(0, 0)" }}
                   transition={{
@@ -203,10 +215,10 @@ export default function HomePage() {
                   viewport={{ once: true, margin: "-150px" }}
                   key={item.title}
                 >
-                  <h3 className="text-xl leading-none text-primary-main/90 font-bold ">
+                  <h3 className="text-primary-main/90 text-xl leading-none font-bold">
                     {item.title}
                   </h3>
-                  <p className="mt-2 leading-7 ">{item.text}</p>
+                  <p className="mt-2 leading-7">{item.text}</p>
                 </motion.article>
               ))}
             </div>
@@ -214,69 +226,88 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-primary-main text-white/95 px-6 py-16 sm:px-8 lg:px-10">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-2 lg:items-start">
-          <div className="mb-6">
-            <p className="mb-2 text-sm uppercase tracking-widest ">
+      <section className="bg-primary-main px-6 py-16 text-white/95 sm:px-8 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-8">
+            <p className="mb-2 text-sm tracking-widest uppercase">
               Why clients choose us
             </p>
-            <h2 className="text-3xl font-semibold text-text">
+            <h2 className="text-text text-3xl font-semibold">
               Clear communication, dependable crews, and carefully finished
               work.
             </h2>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-            <div className="p-4 text-center rounded bg-primary-dark/60 border border-primary-dark/50">
-              <strong className="mb-2 block text-xl font-semibold text-secondary-light">
+            <div className="bg-primary-dark/60 border-primary-dark/50 rounded border p-4 text-center">
+              <strong className="text-secondary-light mb-2 block text-xl font-semibold">
                 <CountUp scrollSpyOnce enableScrollSpy={true} end={20} />+ years
               </strong>
-              <span className="text-sm ">Of experience in trades</span>
+              <span className="text-sm">Of experience in trades</span>
             </div>
-            <div className="p-4 text-center rounded bg-primary-dark/60 border border-primary-dark/50">
-              <strong className="mb-2 block text-xl font-semibold text-secondary-light">
+            <div className="bg-primary-dark/60 border-primary-dark/50 rounded border p-4 text-center">
+              <strong className="text-secondary-light mb-2 block text-xl font-semibold">
                 <CountUp scrollSpyOnce enableScrollSpy={true} end={5} />+
               </strong>
-              <span className="text-sm ">Core services offered</span>
+              <span className="text-sm">Core services offered</span>
             </div>
-            <div className="p-4 text-center rounded bg-primary-dark/60 border border-primary-dark/50">
-              <strong className="mb-2 block text-xl font-semibold text-secondary-light">
+            <div className="bg-primary-dark/60 border-primary-dark/50 rounded border p-4 text-center">
+              <strong className="text-secondary-light mb-2 block text-xl font-semibold">
                 <CountUp scrollSpyOnce enableScrollSpy={true} end={100} />+
               </strong>
-              <span className="text-sm ">
+              <span className="text-sm">
                 Local projects rooted in the community
               </span>
             </div>
-            <div className="p-4 text-center rounded bg-primary-dark/60 border border-primary-dark/50">
-              <strong className="mb-2 block text-xl font-semibold text-secondary-light">
+            <div className="bg-primary-dark/60 border-primary-dark/50 rounded border p-4 text-center">
+              <strong className="text-secondary-light mb-2 block text-xl font-semibold">
                 Customized
               </strong>
-              <span className="text-sm ">for your own taste and enjoyment</span>
+              <span className="text-sm">for your own taste and enjoyment</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-black">
-        <div className="max-w-7xl mx-auto">
-          <video controls className="h-full w-full aspect-video">
-            <source src="/escarpment-dreamlivegrow.mov" />
+      <section className="bg-neutral-900 px-4 py-6 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-2xl border border-white/10 bg-black shadow-xl">
+          <video controls className="aspect-video h-full w-full bg-black">
+            <source
+              src="/home-dream-360p.mp4"
+              type="video/mp4"
+              media="(max-width: 640px)"
+            />
+            <source
+              src="/home-dream-720p.mp4"
+              type="video/mp4"
+              media="(max-width: 1280px)"
+            />
+            <source src="/home-dream-1080p.mp4" type="video/mp4" />
           </video>
         </div>
       </section>
 
-      <section className="bg-primary-dark text-white/95 overflow-hidden py-16 px-6 sm:px-8 lg:px-10">
-        <div className="max-w-7xl mx-auto grid gap-8 md:grid-cols-2 md:items-center">
+      <section className="bg-primary-dark overflow-hidden px-6 py-16 text-white/95 sm:px-8 lg:px-10">
+        <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-2 md:items-center">
           <div className="overflow-hidden">
             <video
               muted
               autoPlay
               loop
               playsInline
-              controls
               className="w-full object-cover md:aspect-square"
             >
-              <source src="/feature-work.mp4" />
+              <source
+                src="/feature-work-360p.mp4"
+                type="video/mp4"
+                media="(max-width: 640px)"
+              />
+              <source
+                src="/feature-work-720p.mp4"
+                type="video/mp4"
+                media="(max-width: 1280px)"
+              />
+              <source src="/feature-work-720p.mp4" type="video/mp4" />
             </video>
           </div>
 
@@ -291,11 +322,11 @@ export default function HomePage() {
             }}
             viewport={{ once: true, margin: "-150px" }}
           >
-            <p className="text-sm uppercase tracking-widest ">Featured work</p>
-            <h2 className="mt-3 text-3xl font-semibold text-text">
+            <p className="text-sm tracking-widest uppercase">Featured work</p>
+            <h2 className="text-text mt-3 text-3xl font-semibold">
               See how we turn rough spaces into refined, functional homes.
             </h2>
-            <p className="mt-10 ">
+            <p className="mt-10">
               From foundational work to final trim, our team keeps projects
               moving with care and precision.
             </p>
@@ -315,10 +346,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="px-6 py-16 bg-white sm:px-8 lg:px-10">
+      <section className="bg-white px-6 py-16 sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-center gap-2">
-            <p className="shrink-0 text-sm uppercase tracking-widest">FAQ</p>
+            <p className="shrink-0 text-sm tracking-widest uppercase">FAQ</p>
             <motion.div
               className="bg-secondary-light h-1 w-full"
               initial={{ width: 0 }}
@@ -330,8 +361,8 @@ export default function HomePage() {
 
           <div className="mt-8 lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)] lg:items-start lg:gap-10">
             <div className="mb-6 lg:mb-0">
-              <h2 className="text-xl md:text-3xl font-semibold">
-                Common questions from homeowners in Stoney Creek and the GTHA.
+              <h2 className="text-xl font-semibold md:text-3xl">
+                Common questions from homeowners in Stoney Creek, Hamilton, and the GTA.
               </h2>
               <p className="mt-6 leading-7 text-slate-700">
                 We work with families and property owners throughout the region,
@@ -350,10 +381,10 @@ export default function HomePage() {
                   transition={{ delay: i * 0.2 }}
                   viewport={{ once: true, margin: "-150px" }}
                 >
-                  <h3 className="text-base sm:text-lg font-semibold text-primary-dark">
+                  <h3 className="text-primary-dark text-base font-semibold sm:text-lg">
                     {faq.question}
                   </h3>
-                  <p className="mt-2 text-sm sm:text-base leading-7 text-slate-700">
+                  <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
                     {faq.answer}
                   </p>
                 </motion.article>
@@ -363,16 +394,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-linear-to-r from-secondary-dark to-secondary-light">
+      <section className="from-secondary-dark to-secondary-light bg-linear-to-r">
         <a
           href={INSTAGRAM_ESCARPMENTDEVELOPMENTS_URL}
           target="_blank"
           rel="noreferrer"
-          className="block text-center tracking-wider group text-3xl px-6 sm:px-8 lg:px-10 py-16 text-black/60 mix-blend-hard-light"
+          className="group block px-6 py-16 text-center text-3xl tracking-wider text-black/60 mix-blend-hard-light sm:px-8 lg:px-10"
         >
           Follow our latest projects on Instagram
           <svg
-            className="inline-block ml-2 -mt-1 transition group-hover:scale-110"
+            className="-mt-1 ml-2 inline-block transition group-hover:scale-110"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             viewBox="0 0 24 24"
