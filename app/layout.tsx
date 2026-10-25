@@ -1,9 +1,17 @@
 import "./global.css";
 import { type ReactNode } from "react";
+import { Roboto } from "next/font/google";
 import Navigation from "./_src/Navigation";
 import Footer from "./_src/Footer";
 import Intro from "./_src/Intro";
 import FaviconIcon from "./favicon.png";
+
+const roboto = Roboto({
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+  variable: "--font-roboto",
+  display: "swap",
+});
 
 export const metadata = {
   metadataBase: new URL("https://escarpment.dev"),
@@ -49,7 +57,7 @@ export const metadata = {
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={roboto.variable}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
