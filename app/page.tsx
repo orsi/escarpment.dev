@@ -22,7 +22,8 @@ const highlights = [
 
 const faqs = [
   {
-    question: "Do you provide renovation services in Stoney Creek and Hamilton?",
+    question:
+      "Do you provide renovation services in Stoney Creek and Hamilton?",
     answer:
       "Yes. Escarpment Developments is based in Stoney Creek and serves homeowners across Hamilton and the Greater Toronto Area.",
   },
@@ -44,11 +45,7 @@ const localBusinessSchema = {
   name: "Escarpment Developments",
   description:
     "Home renovation, flooring, drywall, painting, and property improvement services in Stoney Creek, Hamilton, and the Greater Toronto Area.",
-  areaServed: [
-    "Stoney Creek",
-    "Hamilton",
-    "Greater Toronto Area",
-  ],
+  areaServed: ["Stoney Creek", "Hamilton", "Greater Toronto Area"],
   url: "https://escarpment.dev",
   knowsAbout: [
     "Home renovations",
@@ -121,6 +118,8 @@ export default function HomePage() {
           muted
           loop
           playsInline
+          preload="auto"
+          poster="/hero-poster.webp"
           className="absolute inset-0 h-full w-full object-cover"
         >
           <source
@@ -362,7 +361,8 @@ export default function HomePage() {
           <div className="mt-8 lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)] lg:items-start lg:gap-10">
             <div className="mb-6 lg:mb-0">
               <h2 className="text-xl font-semibold md:text-3xl">
-                Common questions from homeowners in Stoney Creek, Hamilton, and the GTA.
+                Common questions from homeowners in Stoney Creek, Hamilton, and
+                the GTA.
               </h2>
               <p className="mt-6 leading-7 text-slate-700">
                 We work with families and property owners throughout the region,
