@@ -37,12 +37,13 @@ export default function ContactPage() {
 
   return (
     <>
-      <section className="bg-white px-6 sm:px-8 lg:px-10 pt-32">
+      <section className="bg-white px-6 pt-32 sm:px-8 lg:px-10">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <div>
-            <p className="mb-2 text-sm uppercase tracking-widest">Contact us</p>
+            <p className="mb-2 text-sm tracking-widest uppercase">Contact us</p>
             <h2 className="mb-4 text-3xl font-semibold">
-              Request a quote for your renovation or property improvement project.
+              Request a quote for your renovation or property improvement
+              project.
             </h2>
             <p className="leading-7">
               Based in Stoney Creek, Escarpment Developments serves homeowners
@@ -53,15 +54,15 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="bg-white py-16 px-6 sm:px-8 lg:px-10">
-        <div className="max-w-7xl mx-auto">
+      <section className="bg-white px-6 py-16 sm:px-8 lg:px-10">
+        <div className="mx-auto max-w-7xl">
           <form name="contact" onSubmit={onSubmitForm}>
             <div className="grid gap-8 md:grid-cols-2">
               <div className="flex flex-col gap-8">
                 <label className="text-sm font-bold" htmlFor="name">
                   Name
                   <input
-                    className="text-base w-full px-3 py-2 rounded border"
+                    className="w-full rounded border px-3 py-2 text-base"
                     placeholder="Your name"
                     name="name"
                     required
@@ -71,7 +72,7 @@ export default function ContactPage() {
                 <label className="text-sm font-bold" htmlFor="email">
                   Email
                   <input
-                    className="text-base w-full px-3 py-2 rounded border"
+                    className="w-full rounded border px-3 py-2 text-base"
                     type="email"
                     placeholder="you@example.com"
                     name="email"
@@ -82,7 +83,7 @@ export default function ContactPage() {
                 <label className="text-sm font-bold" htmlFor="phone">
                   Phone
                   <input
-                    className="text-base w-full px-3 py-2 rounded border"
+                    className="w-full rounded border px-3 py-2 text-base"
                     placeholder="(555) 555-5555"
                     name="phone"
                     type="tel"
@@ -98,7 +99,7 @@ export default function ContactPage() {
                 >
                   Project details
                   <textarea
-                    className="min-h-30 h-[calc(100%-1.2rem)] text-base w-full px-3 py-2 rounded border"
+                    className="h-[calc(100%-1.2rem)] min-h-30 w-full rounded border px-3 py-2 text-base"
                     placeholder="Share a little about your goals, timeline, and preferred scope."
                     name="message"
                     maxLength={1000}
@@ -108,7 +109,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <button
-                  className={`inline-flex rounded-full bg-primary-main px-6 py-1.5 font-bold text-white transition duration-200 hover:-translate-y-0.5 cursor-pointer ${status.isLoading ? "opacity-40 cursor-default!" : ""}`}
+                  className={`bg-primary-main inline-flex cursor-pointer rounded-full px-6 py-1.5 font-bold text-white transition duration-200 hover:-translate-y-0.5 ${status.isLoading ? "cursor-default! opacity-40" : ""}`}
                   disabled={status.isLoading}
                   type="submit"
                 >
@@ -118,7 +119,7 @@ export default function ContactPage() {
               <div className="md:row-3">
                 {status.type === "success" ? (
                   <div
-                    className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative"
+                    className="relative rounded border border-green-400 bg-green-100 px-4 py-3 text-green-700"
                     role="alert"
                   >
                     <span className="block sm:inline">
@@ -127,7 +128,7 @@ export default function ContactPage() {
                   </div>
                 ) : status.type === "error" ? (
                   <div
-                    className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
+                    className="relative rounded border border-red-400 bg-red-100 px-4 py-3 text-red-700"
                     role="alert"
                   >
                     <span className="block sm:inline">

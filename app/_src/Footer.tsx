@@ -12,21 +12,21 @@ import FacebookLogo from "./FacebookLogo";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary-dark text-white px-6 py-9 sm:px-8 lg:px-10">
+    <footer className="bg-primary-dark px-6 py-9 text-white sm:px-8 lg:px-10">
       <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <h3 className="mb-3  text-sm uppercase tracking-widest">
+          <h3 className="mb-3 text-sm tracking-widest uppercase">
             <span className="font-black">Escarpment</span>{" "}
             <span className="font-then">Developments</span>
           </h3>
-          <p className="text-sm leading-7 text-footer-text/80">
+          <p className="text-footer-text/80 text-sm leading-7">
             Trusted craftsmanship for homes, properties, and complete remodeling
             projects.
           </p>
         </div>
         <div>
           <h4 className="mb-3 text-base font-semibold">Site Map</h4>
-          <ul className="space-y-2 text-sm text-footer-text/80">
+          <ul className="text-footer-text/80 space-y-2 text-sm">
             <li>
               <Link href="/" className="hover:text-accent-dark">
                 Home
@@ -51,7 +51,7 @@ export default function Footer() {
         </div>
         <div>
           <h4 className="mb-3 text-base font-semibold">Contact</h4>
-          <ul className="space-y-2 text-sm text-footer-text/80">
+          <ul className="text-footer-text/80 space-y-2 text-sm">
             <li>1076 Mud St E</li>
             <li>Stoney Creek, ON L8J 3C2</li>
             <li>
@@ -64,7 +64,7 @@ export default function Footer() {
         </div>
         <div>
           <h4 className="mb-3 text-base font-semibold">Follow</h4>
-          <ul className="flex space-x-2 items-start text-sm text-footer-text/80">
+          <ul className="text-footer-text/80 flex items-start space-x-2 text-sm">
             <li>
               <a
                 href={INSTAGRAM_ESCARPMENTDEVELOPMENTS_URL}
@@ -97,7 +97,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto mt-6 flex max-w-7xl flex-wrap items-center justify-between gap-3 border-t border-footer-text/15 pt-4 text-sm text-footer-text/70">
+      <div className="border-footer-text/15 text-footer-text/70 mx-auto mt-6 flex max-w-7xl flex-wrap items-center justify-between gap-3 border-t pt-4 text-sm">
         <span>
           {new Date().toLocaleString("en-CA", { year: "numeric" })} Escarpment
           Developments ©

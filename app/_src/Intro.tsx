@@ -12,13 +12,13 @@ export default function Intro() {
     <AnimatePresence>
       {showIntro && (
         <motion.div
-          className="fixed top-0 left-0 w-full h-full overflow-hidden z-1000 bg-primary-dark"
+          className="bg-primary-dark fixed top-0 left-0 z-1000 h-full w-full overflow-hidden"
           exit={{
             opacity: 0,
             transition: { delay: 0.5, duration: 0.8, ease: "easeIn" },
           }}
         >
-          <div className="flex flex-col items-center justify-center h-full">
+          <div className="flex h-full flex-col items-center justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 520 200"
@@ -58,7 +58,7 @@ export default function Intro() {
                 l 190 190"
               />
             </svg>
-            <h1 className="ml-3 mt-2 text-white/95">
+            <h1 className="mt-2 ml-3 text-white/95">
               <motion.div
                 className="relative text-4xl font-extrabold tracking-wide"
                 initial={{
@@ -70,15 +70,15 @@ export default function Intro() {
                   transform: "translateX(0)",
                 }}
                 transition={{
-                  delay: .9,
-                  duration: .7,
+                  delay: 0.9,
+                  duration: 0.7,
                   ease: "easeOut",
                 }}
               >
                 ESCARPMENT
               </motion.div>
               <motion.div
-                className="ml-0.5 relative font-light tracking-[11.5px]"
+                className="relative ml-0.5 font-light tracking-[11.5px]"
                 initial={{
                   opacity: 0,
                   transform: "translateX(24px)",
@@ -89,7 +89,7 @@ export default function Intro() {
                 }}
                 transition={{
                   delay: 1,
-                  duration: .7,
+                  duration: 0.7,
                   ease: "easeOut",
                 }}
                 onAnimationComplete={() => setShowIntro(false)}

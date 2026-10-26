@@ -32,18 +32,22 @@ export default function Navigation() {
       className={`fixed top-0 z-50 w-full text-slate-50 transition duration-300 ${open || shrink ? "bg-primary-dark/95" : ""} `}
     >
       <div
-        className={`relative max-w-7xl mx-auto px-6 sm:px-8 md:flex items-center justify-between`}
+        className={`relative mx-auto max-w-7xl items-center justify-between px-6 sm:px-8 md:flex`}
       >
         <div
-          className={`flex items-center justify-between h-(--height-nav) transition-[height] duration-500 ${shrink ? "h-(--height-nav-collapsed)" : ""}`}
+          className={`flex h-(--height-nav) items-center justify-between transition-[height] duration-500 ${shrink ? "h-(--height-nav-collapsed)" : ""}`}
         >
-          <Link href="/" onClick={() => setOpen(false)} aria-label="Escarpment home">
+          <Link
+            href="/"
+            onClick={() => setOpen(false)}
+            aria-label="Escarpment home"
+          >
             <Logo
-              className={`text-secondary-main sm:ml-10 transition-[width] duration-500 ${shrink ? "w-10" : "w-20 sm:w-40"}`}
+              className={`text-secondary-main transition-[width] duration-500 sm:ml-10 ${shrink ? "w-10" : "w-20 sm:w-40"}`}
             />
           </Link>
           <button
-            className="md:hidden cursor-pointer"
+            className="cursor-pointer md:hidden"
             onClick={() => setOpen((value) => !value)}
             aria-expanded={open}
             aria-label="Toggle navigation"
@@ -75,7 +79,7 @@ export default function Navigation() {
           style={{
             interpolateSize: "allow-keywords",
           }}
-          className={`flex flex-col gap-2 overflow-hidden transition-[height] ${open ? "h-45" : "h-0"} sm:ml-10 md:flex-row md:h-auto`}
+          className={`flex flex-col gap-2 overflow-hidden transition-[height] ${open ? "h-45" : "h-0"} sm:ml-10 md:h-auto md:flex-row`}
         >
           {links.map((link) => {
             return (
@@ -83,7 +87,7 @@ export default function Navigation() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="mt-2 last:mb-8 py-1 md:rounded-full md:px-6 md:m-0 md:last:mb-0 transition duration-250 md:hover:bg-primary-light/10 "
+                className="md:hover:bg-primary-light/10 mt-2 py-1 transition duration-250 last:mb-8 md:m-0 md:rounded-full md:px-6 md:last:mb-0"
               >
                 {link.label}
               </Link>
