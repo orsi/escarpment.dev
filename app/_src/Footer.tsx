@@ -104,7 +104,7 @@ export default function Footer() {
         </span>
         <Image
           className="w-8"
-          src="/under-construction.gif"
+          src="/under-construction.webp"
           title="UNDER CONSTRUCTION SINCE 1999"
           alt="UNDER CONSTRUCTION SINCE 1999"
           width={32}
