@@ -146,8 +146,8 @@ export default function HomePage() {
                 Home renovations in Stoney Creek, Hamilton, and the GTA.
               </h1>
               <p className="mt-4 text-lg">
-                Escarpment Developments creates beautifully finished spaces for
-                homeowners across Stoney Creek, Hamilton, and the GTA.
+                Thoughtful renovations, quality craftsmanship, and a process
+                that keeps every detail moving smoothly from start to finish.
               </p>
               <div className="mt-4 flex flex-wrap gap-4">
                 <Link
