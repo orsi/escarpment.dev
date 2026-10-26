@@ -7,9 +7,9 @@ export default function AboutPage() {
   return (
     <>
       <section className="bg-white lg:px-10">
-        <div className="max-w-7xl mx-auto flex flex-col-reverse lg:grid lg:grid-cols-2 lg:gap-10">
+        <div className="mx-auto flex max-w-7xl flex-col-reverse lg:grid lg:grid-cols-2 lg:gap-10">
           <motion.div
-            className="py-8 lg:pt-32 lg:pb-16 px-6 lg:px-0"
+            className="px-6 py-8 lg:px-0 lg:pt-32 lg:pb-16"
             initial={{
               opacity: 0,
               transform: "translateX(45px)",
@@ -23,7 +23,7 @@ export default function AboutPage() {
             }}
             viewport={{ once: true, margin: "-150px" }}
           >
-            <p className="text-sm uppercase tracking-widest">
+            <p className="text-sm tracking-widest uppercase">
               About Escarpment
             </p>
             <h2 className="mt-4 text-3xl font-semibold">
@@ -44,24 +44,31 @@ export default function AboutPage() {
               first conversation to the final walkthrough.
             </p>
           </motion.div>
-          <div className="overflow-hidden relative aspect-video lg:aspect-auto min-h-50 mt-(--height-nav-collapsed) lg:mt-0">
+          <div className="relative mt-(--height-nav-collapsed) aspect-video min-h-50 overflow-hidden lg:mt-0 lg:aspect-auto">
             <video
               autoPlay
               muted
               loop
               playsInline
+              preload="auto"
+              poster="/about-splash-poster.webp"
               className="absolute inset-0 h-full w-full object-cover"
             >
-              <source src="/about.mp4" type="video/mp4" />
+              <source
+                src="/about-splash-360p.mp4"
+                type="video/mp4"
+                media="(max-width: 640px)"
+              />
+              <source src="/about-splash-720p.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
       </section>
 
-      <section className="bg-white px-6 pb-8 md:py-16 sm:px-8 lg:px-10">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
+      <section className="bg-white px-6 pb-8 sm:px-8 md:py-16 lg:px-10">
+        <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row">
           <motion.div
-            className="flex-1 text-white/95 bg-primary-dark/90 rounded shadow-lg"
+            className="bg-primary-dark/90 flex-1 rounded text-white/95 shadow-lg"
             initial={{
               opacity: 0,
               transform: "translate(-25px,-25px)",
@@ -82,7 +89,7 @@ export default function AboutPage() {
                 className="aspect-video w-full object-cover"
               />
             </div>
-            <div className="py-6 px-8">
+            <div className="px-8 py-6">
               <h3 className="font-bold tracking-widest">Real Estate</h3>
               <p className="mt-6">
                 Our crews provide flawless installations every time, guaranteed.
@@ -90,7 +97,7 @@ export default function AboutPage() {
             </div>
           </motion.div>
           <motion.div
-            className="flex-1 text-white/95 bg-primary-dark/90 rounded shadow-lg"
+            className="bg-primary-dark/90 flex-1 rounded text-white/95 shadow-lg"
             initial={{
               opacity: 0,
               transform: "translate(-25px,-25px)",
@@ -111,7 +118,7 @@ export default function AboutPage() {
                 className="aspect-video w-full object-cover object-bottom"
               />
             </div>
-            <div className="py-6 px-8">
+            <div className="px-8 py-6">
               <h3 className="font-bold tracking-widest">Home Renovations</h3>
               <p className="mt-6">
                 Our crews provide flawless installations every time, guaranteed.
@@ -119,7 +126,7 @@ export default function AboutPage() {
             </div>
           </motion.div>
           <motion.div
-            className="flex-1 text-white/95 bg-primary-dark/90 rounded shadow-lg"
+            className="bg-primary-dark/90 flex-1 rounded text-white/95 shadow-lg"
             initial={{
               opacity: 0,
               transform: "translate(-25px,-25px)",
@@ -140,7 +147,7 @@ export default function AboutPage() {
                 className="aspect-video w-full object-cover object-bottom"
               />
             </div>
-            <div className="py-6 px-8">
+            <div className="px-8 py-6">
               <h3 className="font-bold tracking-widest">Repairs</h3>
               <p className="mt-6">
                 Our crews provide flawless installations every time, guaranteed.
@@ -152,8 +159,8 @@ export default function AboutPage() {
 
       <section>
         <div className="h-32 bg-[linear-gradient(1deg,var(--color-secondary-light)_100px,var(--color-white)_10px)]" />
-        <div className="pb-16 px-6 sm:px-8 lg:px-10 bg-secondary-light">
-          <div className="max-w-7xl mx-auto">
+        <div className="bg-secondary-light px-6 pb-16 sm:px-8 lg:px-10">
+          <div className="mx-auto max-w-7xl">
             <h3 className="text-4xl font-semibold tracking-wide">Our values</h3>
             <ul className="mt-6 list-disc space-y-2 pl-5">
               <li>Clear communication from start to finish</li>
@@ -166,7 +173,7 @@ export default function AboutPage() {
             </ul>
             <div className="mt-10 grid gap-3 sm:grid-cols-2">
               <motion.div
-                className="rounded py-6 px-8 bg-white/20 text-center"
+                className="rounded bg-white/20 px-8 py-6 text-center"
                 initial={{
                   opacity: 0,
                   transform: "translate(-25px,-25px)",
@@ -186,7 +193,7 @@ export default function AboutPage() {
                 <span className="text-sm">Years serving clients</span>
               </motion.div>
               <motion.div
-                className="rounded py-6 px-8 bg-white/20 text-center"
+                className="rounded bg-white/20 px-8 py-6 text-center"
                 initial={{
                   opacity: 0,
                   transform: "translate(-25px,-25px)",
@@ -206,7 +213,7 @@ export default function AboutPage() {
                 <span className="text-sm">Based in the region</span>
               </motion.div>
               <motion.div
-                className="rounded py-6 px-8 bg-white/20 text-center"
+                className="rounded bg-white/20 px-8 py-6 text-center"
                 initial={{
                   opacity: 0,
                   transform: "translate(-25px,-25px)",
@@ -226,7 +233,7 @@ export default function AboutPage() {
                 <span className="text-sm">Client-focused approach</span>
               </motion.div>
               <motion.div
-                className="rounded py-6 px-8 bg-white/20 text-center"
+                className="rounded bg-white/20 px-8 py-6 text-center"
                 initial={{
                   opacity: 0,
                   transform: "translate(-25px,-25px)",
@@ -252,16 +259,16 @@ export default function AboutPage() {
       </section>
 
       <section className="bg-gray-100 md:px-8 md:pb-16">
-        <div className="max-w-7xl mx-auto">
-          <div className="md:grid md:grid-cols-2 md:gap-8 md:items-center">
+        <div className="mx-auto max-w-7xl">
+          <div className="md:grid md:grid-cols-2 md:items-center md:gap-8">
             <div className="aspect-video overflow-hidden">
               <img
                 src="/serving-ontario.webp"
                 alt="A room under construction work"
-                className="w-full aspect-square object-cover object-bottom"
+                className="aspect-square w-full object-cover object-bottom"
               />
             </div>
-            <div className="px-6 lg:px-0 py-16 md:py-0">
+            <div className="px-6 py-16 md:py-0 lg:px-0">
               <h3 className="mb-2 text-xl font-semibold">
                 Serving Ontario homes with care
               </h3>
@@ -270,7 +277,7 @@ export default function AboutPage() {
                 practical approach to every property.
               </p>
               <Link
-                className="mt-4 inline-flex items-center rounded-full py-2 px-6 bg-primary-main text-white font-bold transition-transform duration-200 hover:-translate-y-0.5"
+                className="bg-primary-main mt-4 inline-flex items-center rounded-full px-6 py-2 font-bold text-white transition-transform duration-200 hover:-translate-y-0.5"
                 href="/contact/"
               >
                 Contact us now
