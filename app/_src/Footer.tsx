@@ -71,6 +71,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 className="block w-8"
+                aria-label="Follow Escarpment on Instagram"
               >
                 <Image
                   src="/instagram.webp"
@@ -87,6 +88,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 className="block w-8"
+                aria-label="Follow Escarpment on Facebook"
               >
                 <FacebookLogo />
               </a>

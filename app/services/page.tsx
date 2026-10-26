@@ -146,6 +146,7 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-3xl">
           <Link
             href="/contact/"
+            aria-label="Contact Escarpment to learn more about your dream home"
             className="group block px-6 py-16 text-center text-3xl tracking-wider text-black/60 mix-blend-hard-light sm:px-8 lg:px-10"
           >
             Contact us to learn more about how we can make your dream home come

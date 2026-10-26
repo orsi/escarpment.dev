@@ -37,7 +37,7 @@ export default function Navigation() {
         <div
           className={`flex items-center justify-between h-(--height-nav) transition-[height] duration-500 ${shrink ? "h-(--height-nav-collapsed)" : ""}`}
         >
-          <Link href="/" onClick={() => setOpen(false)}>
+          <Link href="/" onClick={() => setOpen(false)} aria-label="Escarpment home">
             <Logo
               className={`text-secondary-main sm:ml-10 transition-[width] duration-500 ${shrink ? "w-10" : "w-20 sm:w-40"}`}
             />
