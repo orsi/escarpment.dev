@@ -77,7 +77,7 @@ export default function AboutPage() {
           >
             <div>
               <img
-                src="/tweedside.jpg"
+                src="/tweedside.webp"
                 alt="A view of the side of a barn with a wooden staircase leading to the upper level"
                 className="aspect-video w-full object-cover"
               />
@@ -106,7 +106,7 @@ export default function AboutPage() {
           >
             <div>
               <img
-                src="/about-renovations.jpg"
+                src="/about-renovations.webp"
                 alt="Ceramic tile renovation work in progress"
                 className="aspect-video w-full object-cover object-bottom"
               />
@@ -135,7 +135,7 @@ export default function AboutPage() {
           >
             <div>
               <img
-                src="/about-repairs.jpg"
+                src="/about-repairs.webp"
                 alt="A man repairing a window frame"
                 className="aspect-video w-full object-cover object-bottom"
               />
@@ -256,7 +256,7 @@ export default function AboutPage() {
           <div className="md:grid md:grid-cols-2 md:gap-8 md:items-center">
             <div className="aspect-video overflow-hidden">
               <img
-                src="/serving-ontario.jpg"
+                src="/serving-ontario.webp"
                 alt="A room under construction work"
                 className="w-full aspect-square object-cover object-bottom"
               />

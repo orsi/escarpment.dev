@@ -43,7 +43,7 @@ export const metadata = {
       "Escarpment Developments | Home Renovations in Stoney Creek, Hamilton, and the GTA",
     description:
       "Full-service renovation, flooring, and property improvement solutions for homeowners across Stoney Creek, Hamilton, and the Greater Toronto Area.",
-    images: ["/logo.png"],
+    images: ["/logo.webp"],
   },
   twitter: {
     card: "summary_large_image",
@@ -51,7 +51,7 @@ export const metadata = {
       "Escarpment Developments | Home Renovations in Stoney Creek, Hamilton, and the GTA",
     description:
       "Home renovation, flooring, painting, and property improvement services for Stoney Creek, Hamilton, and the Greater Toronto Area.",
-    images: ["/logo.png"],
+    images: ["/logo.webp"],
   },
 };
 

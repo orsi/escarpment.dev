@@ -73,7 +73,7 @@ export default function Footer() {
                 className="block w-8"
               >
                 <Image
-                  src="/instagram.png"
+                  src="/instagram.webp"
                   alt="Instagram logo"
                   width={32}
                   height={32}
