@@ -270,7 +270,11 @@ export default function HomePage() {
 
       <section className="bg-neutral-900 px-4 py-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl overflow-hidden rounded-2xl border border-white/10 bg-black shadow-xl">
-          <video controls className="aspect-video h-full w-full bg-black">
+          <video
+            controls
+            preload="metadata"
+            className="aspect-video h-full w-full bg-black"
+          >
             <source
               src="/home-dream-360p.mp4"
               type="video/mp4"
@@ -294,17 +298,13 @@ export default function HomePage() {
               autoPlay
               loop
               playsInline
+              preload="metadata"
               className="w-full object-cover md:aspect-square"
             >
               <source
                 src="/feature-work-360p.mp4"
                 type="video/mp4"
                 media="(max-width: 640px)"
-              />
-              <source
-                src="/feature-work-720p.mp4"
-                type="video/mp4"
-                media="(max-width: 1280px)"
               />
               <source src="/feature-work-720p.mp4" type="video/mp4" />
             </video>

@@ -59,9 +59,16 @@ export default function ServicesPage() {
                   muted
                   loop
                   playsInline
+                  preload="auto"
+                  poster="/services-splash-poster.webp"
                   className="absolute inset-0 h-full w-full object-cover"
                 >
-                  <source src="/services-splash.mp4" type="video/mp4" />
+                  <source
+                    src="/services-splash-360p.mp4"
+                    type="video/mp4"
+                    media="(max-width: 640px)"
+                  />
+                  <source src="/services-splash-720p.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>
