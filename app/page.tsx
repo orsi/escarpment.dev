@@ -112,7 +112,7 @@ export default function HomePage() {
           __html: JSON.stringify(localBusinessSchema),
         }}
       />
-      <section className="relative isolate mx-auto max-w-[1900px] overflow-hidden">
+      <section className="relative isolate mx-auto max-w-360 overflow-hidden">
         <video
           autoPlay
           muted
@@ -135,32 +135,29 @@ export default function HomePage() {
           <source src="/hero-1080p.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/20" />
-        <div className="relative mx-auto flex min-h-125 w-full max-w-7xl px-6 py-18 text-white sm:px-20 sm:py-24">
-          <div className="max-w-2xl">
+        <div className="relative mx-auto flex min-h-125 w-full max-w-7xl px-6 py-18 text-white sm:min-h-150 sm:px-20 sm:py-24 md:min-h-175">
+          <div className="flex w-full flex-col">
             <p className="mb-3 text-sm tracking-widest uppercase">
               <span className="font-black">Escarpment</span>{" "}
               <span className="font-thin">Developments</span>
             </p>
-            <div className="rounded border border-white/10 bg-black/10 px-6 py-4 backdrop-blur-sm">
-              <h1 className="text-3xl leading-tight font-semibold md:text-4xl">
-                Home renovations in Stoney Creek, Hamilton, and the GTA.
+            <div className="mt-auto max-w-xl">
+              <h1 className="text-xl leading-tight font-semibold sm:text-3xl">
+                Thoughtful renovations and quality craftsmanship in Hamilton and
+                the GTA.
               </h1>
-              <p className="mt-4 text-lg">
-                Thoughtful renovations, quality craftsmanship, and a process
-                that keeps every detail moving smoothly from start to finish.
-              </p>
-              <div className="mt-4 flex flex-wrap gap-4">
+              <div className="mt-5 flex flex-wrap gap-3">
                 <Link
                   href="/services/"
-                  className="bg-primary-main inline-flex items-center rounded-full px-6 py-2 font-bold text-white transition-transform duration-200 hover:-translate-y-0.5"
+                  className="bg-primary-main inline-flex items-center rounded-full px-5 py-2.5 text-sm font-bold text-white transition-transform duration-200 hover:-translate-y-0.5"
                 >
                   Explore services
                 </Link>
                 <Link
                   href="/contact/"
-                  className="inline-flex items-center rounded-full bg-white/10 px-6 py-2 font-bold text-white transition-transform duration-200 hover:-translate-y-0.5"
+                  className="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-5 py-2.5 text-sm font-bold text-white transition-transform duration-200 hover:-translate-y-0.5"
                 >
-                  Get a quote
+                  Request a quote
                 </Link>
               </div>
             </div>
@@ -168,10 +165,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-16 sm:px-8 lg:px-10">
+      <section className="bg-white px-6 py-24 sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-center gap-2">
-            <p className="shrink-0 text-sm tracking-widest uppercase">
+            <p className="shrink-0 text-xl tracking-widest uppercase">
               About Us
             </p>
             <motion.div
@@ -189,7 +186,7 @@ export default function HomePage() {
               viewport={{ once: true, margin: "-100px" }}
             />
           </div>
-          <div className="mt-8 flex flex-col gap-6 lg:flex-row lg:gap-10">
+          <div className="mt-16 flex flex-col gap-6 lg:flex-row lg:gap-10">
             <div className="lg:w-1/2">
               <h2 className="text-xl font-semibold md:text-3xl">
                 From simple updates to full-scale transformations, we do the
@@ -227,48 +224,92 @@ export default function HomePage() {
 
       <section className="bg-primary-main px-6 py-16 text-white/95 sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-8">
-            <p className="mb-2 text-sm tracking-widest uppercase">
+          <div className="max-w-3xl">
+            <p className="mb-2 text-2xl tracking-widest text-white/80 uppercase">
               Why clients choose us
             </p>
-            <h2 className="text-text text-3xl font-semibold">
-              Clear communication, dependable crews, and carefully finished
-              work.
+            <h2 className="text-4xl leading-tight font-semibold text-white md:text-5xl">
+              Clear communication, dependable crews, and work that feels built
+              to last.
             </h2>
+            <p className="mt-4 max-w-2xl text-lg leading-8 text-white/75">
+              From the first walkthrough to the final detail, we keep the
+              process straightforward, respectful, and finished with care.
+            </p>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-            <div className="bg-primary-dark/60 border-primary-dark/50 rounded border p-4 text-center">
-              <strong className="text-secondary-light mb-2 block text-xl font-semibold">
-                <CountUp scrollSpyOnce enableScrollSpy={true} end={20} />+ years
+          <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4 xl:items-start">
+            <motion.div
+              className="bg-primary-dark/55 border-primary-dark/60 rounded-xl border p-5 text-center shadow-[8px_8px_0_rgba(0,0,0,0.12)] xl:mt-0"
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.5, delay: 0.06, ease: "easeOut" }}
+            >
+              <strong className="text-secondary-light mb-2 block text-3xl leading-none font-semibold">
+                <CountUp scrollSpyOnce enableScrollSpy={true} end={20} />+
               </strong>
-              <span className="text-sm">Of experience in trades</span>
-            </div>
-            <div className="bg-primary-dark/60 border-primary-dark/50 rounded border p-4 text-center">
-              <strong className="text-secondary-light mb-2 block text-xl font-semibold">
+              <span className="text-sm tracking-widest text-white/70 uppercase">
+                Years
+              </span>
+              <p className="mt-2 text-base text-white/75">
+                Of experience in trades
+              </p>
+            </motion.div>
+            <motion.div
+              className="bg-primary-dark/55 border-primary-dark/60 rounded-xl border p-5 text-center shadow-[8px_8px_0_rgba(0,0,0,0.12)] xl:mt-8"
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.5, delay: 0.18, ease: "easeOut" }}
+            >
+              <strong className="text-secondary-light mb-2 block text-3xl leading-none font-semibold">
                 <CountUp scrollSpyOnce enableScrollSpy={true} end={5} />+
               </strong>
-              <span className="text-sm">Core services offered</span>
-            </div>
-            <div className="bg-primary-dark/60 border-primary-dark/50 rounded border p-4 text-center">
-              <strong className="text-secondary-light mb-2 block text-xl font-semibold">
+              <span className="text-sm tracking-widest text-white/70 uppercase">
+                Services
+              </span>
+              <p className="mt-2 text-base text-white/75">
+                Core offerings under one roof
+              </p>
+            </motion.div>
+            <motion.div
+              className="bg-primary-dark/55 border-primary-dark/60 rounded-xl border p-5 text-center shadow-[8px_8px_0_rgba(0,0,0,0.12)] xl:mt-20"
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+            >
+              <strong className="text-secondary-light mb-2 block text-3xl leading-none font-semibold">
                 <CountUp scrollSpyOnce enableScrollSpy={true} end={100} />+
               </strong>
-              <span className="text-sm">
-                Local projects rooted in the community
+              <span className="text-sm tracking-widest text-white/70 uppercase">
+                Projects
               </span>
-            </div>
-            <div className="bg-primary-dark/60 border-primary-dark/50 rounded border p-4 text-center">
-              <strong className="text-secondary-light mb-2 block text-xl font-semibold">
-                Customized
+              <p className="mt-2 text-base text-white/75">
+                Local work rooted in the community
+              </p>
+            </motion.div>
+            <motion.div
+              className="bg-secondary-light text-primary-dark rounded-xl border border-white/20 p-5 text-center shadow-[8px_8px_0_rgba(0,0,0,0.12)] xl:mt-32"
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.5, delay: 0.42, ease: "easeOut" }}
+            >
+              <strong className="mb-2 block text-3xl leading-none font-semibold">
+                1 Tailored Approach
               </strong>
-              <span className="text-sm">for your own taste and enjoyment</span>
-            </div>
+              <p className="text-primary-dark/80 mt-2 text-base">
+                Built around <em>your</em> home, <em>your</em> taste, and{" "}
+                <em>your</em> goals
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      <section className="bg-neutral-900 px-4 py-6 sm:px-6 lg:px-8">
+      <section className="bg-neutral-900 px-8 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl overflow-hidden rounded-2xl border border-white/10 bg-black shadow-xl">
           <video
             controls
@@ -290,9 +331,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-primary-dark overflow-hidden px-6 py-16 text-white/95 sm:px-8 lg:px-10">
+      <section className="bg-white px-6 py-16 text-black sm:px-8 lg:px-10">
         <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-2 md:items-center">
-          <div className="overflow-hidden">
+          <div className="overflow-hidden rounded-2xl border border-black/10 bg-black/5">
             <video
               muted
               autoPlay
@@ -311,6 +352,7 @@ export default function HomePage() {
           </div>
 
           <motion.div
+            className="text-black/80"
             initial={{
               opacity: 0,
               transform: "translateX(45px)",
@@ -321,8 +363,8 @@ export default function HomePage() {
             }}
             viewport={{ once: true, margin: "-150px" }}
           >
-            <p className="text-sm tracking-widest uppercase">Featured work</p>
-            <h2 className="text-text mt-3 text-3xl font-semibold">
+            <p className="text-xl tracking-widest uppercase">Featured work</p>
+            <h2 className="mt-3 text-3xl font-semibold">
               See how we turn rough spaces into refined, functional homes.
             </h2>
             <p className="mt-10">
@@ -345,12 +387,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-16 sm:px-8 lg:px-10">
+      <section className="bg-white px-6 pt-8 pb-16 text-black/80 sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
-          <div className="flex items-center gap-2">
-            <p className="shrink-0 text-sm tracking-widest uppercase">FAQ</p>
+          <div className="flex w-full items-center gap-2">
+            <p className="shrink-0 text-xl tracking-widest uppercase">FAQ</p>
             <motion.div
-              className="bg-secondary-light h-1 w-full"
+              className="bg-secondary-light h-1 flex-1"
               initial={{ width: 0 }}
               whileInView={{ width: "100%" }}
               transition={{ delay: 0.3, duration: 0.8 }}
@@ -394,12 +436,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="from-secondary-dark to-secondary-light bg-linear-to-r">
+      <section className="from-secondary-dark to-secondary-light bg-linear-to-r text-black/60">
         <a
           href={INSTAGRAM_ESCARPMENTDEVELOPMENTS_URL}
           target="_blank"
           rel="noreferrer"
-          className="group block px-6 py-16 text-center text-3xl tracking-wider text-black/60 mix-blend-hard-light sm:px-8 lg:px-10"
+          className="group block px-6 py-16 text-center text-3xl tracking-wider mix-blend-hard-light sm:px-8 lg:px-10"
         >
           Follow our latest projects on Instagram
           <svg
